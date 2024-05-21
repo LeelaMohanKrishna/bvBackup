@@ -1,0 +1,132 @@
+@import '../common/mixin.scss';
+@import '../common/variable.scss';
+
+.our-story-section {
+	.description {
+		@include mainWidth;
+		@include flex;
+		flex-direction: column;
+		padding: 80px 40px 0px 40px;
+		@include for-tablet {
+			padding: 90px 0 40px 0;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		@include for-desktop {
+			padding: 120px 0px 60px 0;
+		}
+		margin: 0 auto;
+		position: relative;
+		&::after {
+			content: '';
+			background-image: url('./assets/images/pepper.webp');
+			background-size: cover;
+			position: absolute;
+			bottom: -9%;
+			left: 10%;
+			height: 80px;
+			width: 80px;
+			-webkit-filter: drop-shadow(47.543px 63.092px 45px rgba(0, 0, 0, 0.76));
+			filter: drop-shadow(47.543px 63.092px 45px rgba(0, 0, 0, 0.76));
+			@include for-tablet {
+				bottom: -16%;
+				left: 10%;
+				height: 120px;
+				width: 120px;
+			}
+			@include for-desktop {
+				bottom: -14%;
+				left: 15%;
+				height: 140px;
+				width: 140px;
+			}
+		}
+		.description-heading {
+			@include for-tablet {
+				padding-left: 80px;
+			}
+			@include for-desktop {
+				padding-left: 180px;
+			}
+		}
+		.description-content {
+			@include for-tablet {
+				padding-right: 80px;
+			}
+			@include for-desktop {
+				padding-right: 180px;
+			}
+		}
+		h2 {
+			font-size: 22px;
+			letter-spacing: 3px;
+			line-height: 1px;
+			text-transform: uppercase;
+			color: $custom-black;
+			font-weight: 700;
+			font-family: $play-fare;
+			@include for-tablet {
+				font-size: 32px;
+			}
+			@include for-desktop {
+				font-size: 42px;
+			}
+		}
+		h3 {
+			font-size: 50px;
+			letter-spacing: 6px;
+			line-height: 1px;
+			@include blue;
+			font-weight: 700;
+			font-family: $play-fare;
+			@include for-tablet {
+				font-size: 70;
+			}
+			@include for-desktop {
+				font-size: 100px;
+			}
+		}
+		p {
+			word-wrap: break-word;
+			font-size: 16px;
+			line-height: 33px;
+			color: $custom-black;
+			font-weight: 400;
+			font-family: $play-fare;
+			@include for-tablet {
+				font-size: 18px;
+				max-width: 434px;
+			}
+			@include for-desktop {
+				font-size: 21px;
+				max-width: 672px;
+			}
+		}
+		span {
+			font-size: 12px;
+			letter-spacing: 3px;
+			line-height: 33px;
+			text-transform: uppercase;
+			@include blue;
+			font-weight: 700;
+			font-family: $play-fare;
+			@include for-tablet {
+				font-size: 17px;
+			}
+		}
+		span:hover {
+			@include blue;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		img {
+			margin-left: 80%;
+			height: 65px;
+			width: 65px;
+			@include for-tablet {
+				height: 80px;
+				width: 80px;
+			}
+		}
+	}
+}

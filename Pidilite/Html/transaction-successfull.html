@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cyno</title>
+		<link rel="stylesheet" href="./css/custom.css" />
+	</head>
+	<body>
+		<div class="main-wrapper flex m-auto flex-column">
+			<!-- <img src="./images/welcome.gif" class="m-auto welcome-gif"/> -->
+			<div class="banner-gif"></div>
+			<div class="content-wrapper flex flex-column flex-auto transaction-details">
+				<div class="text-with-icon flex flex-space-between flex-align-center">
+					<div>
+						<h3>Transaction Details</h3>
+					</div>
+					<button type="button" class="btn-small"><i class="ci-logout"></i>Logout</button>
+				</div>
+				<div class="transaction-successful text-center">
+					<img src="./images/success.gif" class="success-gif" />
+					<h3 class="text-green">₹5 successfully credited in your rewards wallet!</h3>
+				</div>
+				<div class="transaction-wrapper">
+					<div class="box flex flex-wrap box-3">
+						<div class="box-wrapper">
+							<div class="flex flex-column box-section">
+								<span class="box-name-small">Current Balance Amount</span>
+								<span class="box-title">₹95</span>
+							</div>
+						</div>
+						<div class="box-wrapper">
+							<div class="flex flex-column box-section">
+								<span class="box-name-small">Total Amount Earned</span>
+								<span class="box-title">₹745</span>
+							</div>
+						</div>
+						<div class="box-wrapper">
+							<div class="flex flex-column box-section">
+								<span class="box-name-small">Transaction History</span>
+								<a href="#"><i class="ci-arrow"></i></a>
+								<span class="box-title box-title-small">View List</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="transaction-text">Money will automatically be credited to your source after ₹250</div>
+				<table>
+					<tr>
+						<th>₹ earned</th>
+						<th>24/11/2023</th>
+					</tr>
+					<tr>
+						<td>5.0</td>
+						<td>12:18 AM</td>
+					</tr>
+				</table>
+				<div class="mt-auto flex flex-column">
+					<button type="submit" class="btn btn-bottom">Go to Home</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

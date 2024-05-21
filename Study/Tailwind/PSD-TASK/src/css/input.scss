@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	h1 {
+		@apply text-4xl;
+	}
+
+	h2 {
+		@apply text-3xl;
+	}
+
+	h3 {
+		@apply text-xl;
+	}
+
+	input {
+		@apply rounded-md border border-solid border-border-gray box-border text-lg font-normal md:text-xl placeholder:text-default-black p-3 md:p-4 lg:p-5;
+	}
+
+	li {
+		@apply hover:cursor-pointer hover:text-default-blue;
+	}
+
+	@font-face {
+		font-family: 'Surfer Bay';
+		src: url('../../src/fonts/surferBay/SurferBayRegular.woff2') format('woff2'), url('../../src/fonts/surferBay/SurferBayRegular.woff') format('woff'), url('../../src/fonts/surferBay/SurferBayRegular.ttf') format('truetype'), url('../../src/fonts/surferBay/SurferBayRegular.svg#SurferBayRegular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+}
+
+@layer components {
+	.image-arrow {
+		@apply absolute w-full bg-white pb-7 lg:pb-[2.3rem] -bottom-[1.79rem] sm:-bottom-[1.75rem] lg:-bottom-[1.9rem] overflow-x-clip;
+
+		&::before,
+		&::after {
+			@apply content-[''] absolute w-6/12 bg-inherit pb-[inherit] bottom-full;
+		}
+
+		&::before {
+			@apply origin-[100%_100%] skew-x-[45deg] right-2/4;
+		}
+
+		&::after {
+			@apply origin-[0_100%] skew-x-[-45deg] left-2/4;
+		}
+	}
+
+	.sliderContainer {
+		.slick-current + .slick-slide {
+			@apply transform scale-[1.35] duration-300;
+			h2 {
+				@apply text-3xl;
+			}
+		}
+
+		.slick-track {
+			@apply flex items-center md:py-12 xl:py-24;
+			img {
+				@apply drop-shadow-slick;
+			}
+		}
+
+		.slick-next::before {
+			@apply bg-next inline-block h-8 md:h-12 w-4 md:w-6 bg-cover opacity-80 content-[''];
+		}
+
+		.slick-prev::before {
+			@apply bg-prev inline-block h-8 md:h-12 w-4 md:w-6 bg-cover opacity-80 content-[''];
+		}
+
+		.slick-prev {
+			@apply z-30 left-5 md:left-32 lg:left-52 xl:left-440 top-40 md:top-56 xl:top-[17rem];
+		}
+
+		.slick-next {
+			@apply z-30 right-5 md:right-32 lg:right-52 xl:right-440 top-40 md:top-56 xl:top-[17rem];
+		}
+	}
+
+	.events {
+		.slick-dots {
+			@apply mx-auto lg:-left-[0.375rem] xl:left-[2.1rem] -bottom-8 lg:bottom-8 xl:bottom-12 lg:w-28;
+		}
+
+		.slick-dots li {
+			@apply my-0 mx-[0.125rem];
+		}
+
+		.slick-dots li button::before {
+			@apply text-lg;
+		}
+
+		.slick-dots li.slick-active button::before {
+			@apply text-default-blue text-lg;
+		}
+	}
+
+	.bg-scroll {
+		@apply bg-slate-900 transition-all duration-300;
+	}
+	.bg-content-scroll {
+		@apply transition-all duration-300 lg:py-4 !important;
+	}
+
+	.topnav {
+		@apply lg:hidden w-full relative transition-all duration-300;
+		#myLinks {
+			@apply hidden pt-4 divide-y divide-solid;
+			a {
+				@apply block p-4 text-base bg-slate-900 hover:cursor-pointer hover:text-default-blue hover:bg-blue-200;
+			}
+		}
+		.menu-icon {
+			@apply absolute right-4 top-0;
+		}
+	}
+}

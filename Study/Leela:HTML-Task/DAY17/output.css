@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?tu7tgx");
+  src: url("fonts/icomoon.eot?tu7tgx#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?tu7tgx") format("truetype"), url("fonts/icomoon.woff?tu7tgx") format("woff"), url("fonts/icomoon.svg?tu7tgx#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-cart:before {
+  content: '\e93a'; }
+
+.icon-search:before {
+  content: '\e986'; }
+
+.icon-fire:before {
+  content: '\e9a9'; }
+
+.icon-menu:before {
+  content: '\e9bd'; }
+
+.icon-eye:before {
+  content: '\e9ce'; }
+
+.icon-arrow-right2:before {
+  content: '\ea3c'; }
+
+.icon-arrow-left2:before {
+  content: '\ea40'; }
+
+.icon-mail2:before {
+  content: '\ea84'; }
+
+.icon-telegram:before {
+  content: '\ea95'; }
+
+:root {
+  --teal: rgb(77, 199, 199); }
+
+.main-container {
+  width: 100vw;
+  background-image: url("./images/bridge.jpg");
+  background-size: cover; }
+  .main-container header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    padding-top: 30px; }
+    .main-container header ul {
+      width: 600px;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between; }
+      .main-container header ul li a {
+        color: #fff;
+        text-decoration: none; }
+      .main-container header ul li a:hover {
+        color: var(--teal); }
+
+.banner-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  height: 700px; }
+  .banner-container h1 {
+    text-transform: uppercase; }
+  .banner-container div .button {
+    height: 40px;
+    padding: 0 30px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box; }
+  .banner-container div .button:hover {
+    color: var(--teal);
+    border: 2px solid var(--teal); }
+  .banner-container div .button1 {
+    height: 40px;
+    padding: 0 30px;
+    margin-left: 5px;
+    background-color: var(--teal);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer; }
+  .banner-container div .button1:hover {
+    color: var(--teal);
+    background-color: #1d6868; }
+
+footer {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  margin-top: 50px; }
+  footer ul {
+    display: flex;
+    list-style: none; }
+    footer ul li {
+      width: 250px;
+      padding: 25px;
+      text-align: center; }
+      footer ul li span {
+        color: var(--teal);
+        font-size: 40px;
+        background-color: #f1f8f8;
+        padding: 25px;
+        border-radius: 50px; }
+      footer ul li div h3 {
+        margin: 40px 0 10px 0; }
+
+/*# sourceMappingURL=output.css.map */

@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    background-color: white;
+}
+
+:root {
+    --grey: rgb(172, 164, 164)
+}
+
+.banner-container {
+    background-image: url('../assets/images/mac2.jpg');
+    background-size: cover;
+    width: 100vw;
+    padding-bottom: 7%;
+}
+
+.container1 a {
+    color: black;
+}
+
+.container3 a {
+    color: white;
+}
+
+.grid-container {
+    margin-left: 20%;
+    padding-top: 5%;
+    width: 30%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.container1 {
+    width: 250px;
+    height: 200px;
+    margin: 10px;
+    background-color: white;
+    padding: 20px;
+}
+
+.container2 {
+    width: 250px;
+    height: 200px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.486);
+    padding: 20px;
+    color: white;
+}
+
+.container3 {
+    width: 250px;
+    height: 200px;
+    margin: 10px;
+    background-color: rgb(240, 123, 45);
+    padding: 20px;
+    color: white;
+}
+
+.container2 h1 {
+    font-size: 32px;
+}
+
+.content-banner {
+    background-image: linear-gradient(to bottom, white 40%, rgb(236, 195, 178) 10%);
+    height: 80vh;
+    position: relative;
+}
+
+.image1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 7%;
+}
+
+.content-container1 {
+    position: absolute;
+    top: 35%;
+    left: 28%;
+    width: 250px;
+    height: 300px;
+    background-color: white;
+    padding: 20px;
+}
+
+.content-container2 {
+    position: absolute;
+    top: 55%;
+    left: 47%;
+    width: 350px;
+    height: 250px;
+    background-color: rgb(240, 123, 45);
+    padding: 20px;
+    color: white;
+}
+
+button {
+    height: 45px;
+    padding: 0 25px;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--grey);
+}
+
+.footer-container {
+    background-color: rgb(211, 211, 211);
+    height: 500px;
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.details-container {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    color: white;
+    background-color: grey;
+    height: 300px;
+    width: 250px;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: rgb(255, 255, 255);
+    height: 300px;
+    width: 400px;
+    padding: 60px;
+    padding-left: 9%;
+}
+
+input {
+    height: 30px;
+    padding: 5px;
+    width: 380px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 2px solid var(--grey);
+    border-radius: 1px;
+}
+
+textarea {
+    height: 100px;
+    padding: 5px;
+    width: 380px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 2px solid var(--grey);
+    border-radius: 1px;
+}
+
+.form-container button {
+    height: 45px;
+    padding: 0 25px;
+    background-color: transparent;
+    border: 2px solid var(--grey);
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: var(--grey);
+}

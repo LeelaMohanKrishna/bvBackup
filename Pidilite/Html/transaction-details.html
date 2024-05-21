@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cyno</title>
+		<link rel="stylesheet" href="./css/custom.css" />
+	</head>
+	<body>
+		<div class="main-wrapper flex m-auto flex-column">
+			<!-- <img src="./images/welcome.gif" class="m-auto welcome-gif"/> -->
+			<div class="banner-gif"></div>
+			<div class="content-wrapper flex flex-column flex-auto phone-verify">
+				<div class="text-with-icon flex flex-space-between flex-align-start">
+					<div>
+						<h3>KYC Details</h3>
+						<h6>Please upload your KYC document</h6>
+					</div>
+					<button type="button" class="btn-small"><i class="ci-logout"></i>Logout</button>
+				</div>
+				<div class="box flex flex-wrap box-3">
+					<h6 class="w-full">Select Document</h6>
+					<div class="box-wrapper">
+						<input type="radio" id="eng" name="lanuages" />
+						<label for="eng"></label>
+						<div class="flex flex-column flex-align-center box-section">
+							<picture>
+								<img src="./images/adhar.svg" />
+							</picture>
+							<span class="box-name-medium">Aadhaar Card</span>
+						</div>
+					</div>
+					<div class="box-wrapper deactive">
+						<input type="radio" id="hindi" name="lanuages" />
+						<label for="hindi"></label>
+						<div class="flex flex-column flex-align-center box-section">
+							<picture>
+								<img src="./images/pan.svg" />
+							</picture>
+							<span class="box-name-medium">PAN Card</span>
+						</div>
+					</div>
+					<div class="box-wrapper">
+						<input type="radio" id="ಕ" name="lanuages" />
+						<label for="ಕ"></label>
+						<div class="flex flex-column flex-align-center box-section">
+							<picture>
+								<img src="./images/pan.svg" />
+							</picture>
+							<span class="box-name-medium">Driving License</span>
+						</div>
+					</div>
+				</div>
+				<div class="upload-image">
+					<h6 class="w-full">Upload Image</h6>
+					<div class="file-input flex flex-align-center">
+						<input type="file" id="file" class="file" />
+						<label for="file">
+							Choose File
+						</label><span class="file-default">No file chosen</span>
+						<span class="file-name">
+							<a href="#"><i class="ci-close"></i></a>
+							<span></span>
+						</span>
+					</div>
+				</div>
+				<div class="mt-auto flex flex-column">
+					<span class="tag tag-blue"><i class="ci-info"></i>KYC is mandatory for credit of money.</span>
+					<button type="submit" class="btn btn-bottom" disabled>Submit</button>
+					<a href="javascript:void(0)" class="link skip-link">Skip KYC Verification</a>
+				</div>
+			</div>
+		</div>
+		<script>
+			const file = document.querySelector('#file');
+			file.addEventListener('change', (e) => {
+				// Get the selected file
+				const [file] = e.target.files;
+				// Get the file name and size
+				const { name: fileName, size } = file;
+				// Set the text content
+				const fileNameAndSize = fileName;
+				document.querySelector('.file-name span').textContent = fileNameAndSize;
+			});
+		</script>
+	</body>
+</html>

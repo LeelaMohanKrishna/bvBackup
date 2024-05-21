@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?uz8vji');
+    src: url('fonts/icomoon.eot?uz8vji#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?uz8vji') format('truetype'),
+        url('fonts/icomoon.woff?uz8vji') format('woff'),
+        url('fonts/icomoon.svg?uz8vji#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart:before {
+    content: "\e93a";
+}
+
+.icon-search:before {
+    content: "\e986";
+}
+
+.icon-zoom-in:before {
+    content: "\e987";
+}
+
+.icon-fire:before {
+    content: "\e9a9";
+}
+
+.icon-menu:before {
+    content: "\e9bd";
+}
+
+.icon-sphere:before {
+    content: "\e9c9";
+}
+
+.icon-link:before {
+    content: "\e9cb";
+}
+
+.icon-eye:before {
+    content: "\e9ce";
+}
+
+.icon-arrow-right2:before {
+    content: "\ea3c";
+}
+
+.icon-arrow-left2:before {
+    content: "\ea40";
+}
+
+.icon-mail2:before {
+    content: "\ea84";
+}
+
+* {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.headComponent {
+    display: flex;
+    justify-content: space-between;
+    width: 1265px;
+    margin: 10px auto;
+}
+
+header {
+    background-color: #155BD5;
+    height: 75px;
+    padding-top: 15px;
+    color: white;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+}
+
+.navComponent {
+    display: flex;
+}
+
+.navComponent h1 {
+    margin-right: 45px;
+}
+
+nav ul {
+    display: flex;
+    padding-top: 15px;
+}
+
+nav ul li {
+    margin-left: 15px;
+    font-weight: bold;
+    color: rgb(190, 190, 190);
+}
+
+nav ul li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.headComponent span {
+    margin-top: inherit;
+    cursor: pointer;
+}
+
+.second-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1265px;
+    margin: 25px auto;
+}
+
+.grid-container {
+    display: grid;
+    column-gap: 25px;
+    grid-template-columns: auto auto auto;
+    width: 1265px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.imageContainer {
+    border-radius: 15px;
+}
+
+.overlay {
+    position: absolute;
+    background: rgba(233, 233, 233, 0.705);
+    opacity: 0;
+    width: 400px;
+    height: 400px;
+    transition: .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay span {
+    margin-left: 15px;
+    font-size: x-large;
+    background-color: #155BD5;
+    padding: 15px;
+    border-radius: 12px;
+    color: white;
+}
+
+.overlay:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.container p {
+    color: gray;
+}
+
+.imageCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 613px;
+    color: rgb(20, 20, 20);
+}
+
+.imageCard h1 {
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 72px;
+}
+
+.imageCard p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.thirdContainer {
+    width: 1265px;
+    margin: 25px auto;
+}
+
+.thirdContainer ul li {
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.thirdContainer ul li:nth-child(odd) div {
+    display: flex;
+    height: 732px;
+}
+
+.thirdContainer ul li:nth-child(even) div {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 732px;
+}
+
+.thirdContainer ul li:nth-child(even) div .imageCard {
+    display: flex;
+    flex-direction: column;
+}

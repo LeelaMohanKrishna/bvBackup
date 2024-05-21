@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    width: 100vw;
+}
+
+.icon {
+    height: 50px;
+    cursor: pointer;
+}
+
+header {
+    width: 60%;
+    margin: auto;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+}
+
+.navLinks li a {
+    position: relative;
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.navLinks li a:hover {
+    text-decoration: underline;
+}
+
+.navLinks li {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.navLinks li ul {
+    min-width: 100px;
+    position: absolute;
+    display: none;
+}
+
+.navLinks li:hover > ul,
+.navLinks li ul:hover {
+    display: block;
+}

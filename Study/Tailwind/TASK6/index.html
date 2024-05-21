@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TASK6</title>
+		<link rel="stylesheet" href="./src/css/output.css" />
+	</head>
+	<body>
+		<div class="container w-2/3 mx-auto">
+			<section>
+				<h2>Flex basis</h2>
+				<div class="flex-div">
+					<div class="basis-1/4 custom-div">01</div>
+					<div class="basis-1/4 custom-div">02</div>
+					<div class="basis-1/2 custom-div">03</div>
+				</div>
+			</section>
+			<hr />
+			<section class="grid grid-cols-2 gap-x-4">
+				<div>
+					<h2>Flex row</h2>
+					<div class="flex flex-row gap-x-2 text-center mb-4">
+						<div class="custom-div">01</div>
+						<div class="custom-div">02</div>
+						<div class="custom-div">03</div>
+					</div>
+				</div>
+				<div>
+					<h2>Flex row-reverse</h2>
+					<div class="flex flex-row-reverse gap-x-2 text-center mb-4">
+						<div class="custom-div">01</div>
+						<div class="custom-div">02</div>
+						<div class="custom-div">03</div>
+					</div>
+				</div>
+			</section>
+			<hr />
+			<section class="grid grid-cols-2 gap-x-4">
+				<div>
+					<h2>Flex col</h2>
+					<div class="flex flex-col gap-y-2 text-center mb-4">
+						<div class="custom-div">01</div>
+						<div class="custom-div">02</div>
+						<div class="custom-div">03</div>
+					</div>
+				</div>
+				<div>
+					<h2>Flex col-reverse</h2>
+					<div class="flex flex-col-reverse gap-y-2 text-center mb-4">
+						<div class="custom-div">01</div>
+						<div class="custom-div">02</div>
+						<div class="custom-div">03</div>
+					</div>
+				</div>
+			</section>
+			<hr />
+			<section class="grid grid-cols-3">
+				<div>
+					<h2>Flex wrap</h2>
+					<div class="flex flex-wrap gap-2 text-center mb-4 w-36">
+						<div class="custom-div">01</div>
+						<div class="custom-div">02</div>
+						<div class="custom-div">03</div>
+					</div>
+				</div>
+				<div>
+					<h2>Flex wrap-reverse</h2>
+					<div class="flex flex-wrap-reverse gap-2 text-center mb-4 w-36">
+						<div class="custom-div">01</div>
+						<div class="custom-div">02</div>
+						<div class="custom-div">03</div>
+					</div>
+				</div>
+				<div>
+					<h2>Flex no-wrap</h2>
+					<div class="flex flex-nowrap gap-x-2 text-center mb-4 w-32">
+						<div class="custom-div">01</div>
+						<div class="custom-div">02</div>
+						<div class="custom-div">03</div>
+					</div>
+				</div>
+			</section>
+			<hr />
+			<section>
+				<h2>Flex-initial/auto/1/none</h2>
+				<div class="flex-div">
+					<div class="flex-none custom-div w-14">01</div>
+					<div class="flex-1 custom-div w-32">02</div>
+					<div class="flex-initial custom-div w-64">03</div>
+					<div class="flex-auto custom-div w-64">04</div>
+				</div>
+				<hr />
+				<h2>Flex grow</h2>
+				<div class="flex-div">
+					<div class="flex-none custom-div w-14">01</div>
+					<div class="grow custom-div">02</div>
+					<div class="grow-0 custom-div">03</div>
+					<div class="flex-none custom-div w-14">04</div>
+				</div>
+			</section>
+			<hr />
+			<section class="grid grid-cols-2 gap-x-4">
+				<div>
+					<h2>Flex shrink</h2>
+					<div class="flex-div">
+						<div class="flex-none custom-div w-16">01</div>
+						<div class="shrink custom-div w-64">02</div>
+						<div class="flex-none custom-div w-16">03</div>
+					</div>
+				</div>
+				<div>
+					<h2>Flex shrink-0</h2>
+					<div class="flex-div">
+						<div class="flex-1 custom-div w-16">01</div>
+						<div class="shrink-0 custom-div w-32">02</div>
+						<div class="flex-1 custom-div w-16">03</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

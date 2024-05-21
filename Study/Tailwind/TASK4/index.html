@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TASK4</title>
+		<link rel="stylesheet" href="./src/css/output.css" />
+	</head>
+	<body>
+		<div class="container mx-auto p-1">
+			<div class="aspect-w-16 aspect-h-8 mb-4">
+				<iframe src="https://www.youtube.com/embed/t0Q2otsqC4I?si=4m8iFZ9N6bIc75xG" title="YouTube video player"></iframe>
+			</div>
+			<div class="container">
+				<h1 class="text-center">Hello World!</h1>
+				<div class="columns-3 mb-4">
+					<img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="img" height="100" width="450" title="pexel" />
+					<img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="img" height="100" width="450" title="pexel" />
+					<img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="img" height="100" width="450" title="pexel" />
+					<img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="img" height="100" width="450" title="pexel" />
+					<img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="img" height="100" width="450" title="pexel" />
+					<img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="img" height="100" width="450" title="pexel" />
+				</div>
+				<div>
+					<h2>break-after-before</h2>
+				</div>
+				<div class="columns-3 bg-slate-200 p-3 mb-4">
+					<p>Well, let me tell you something, ...</p>
+					<p class="break-after-column">Sure, go ahead, laugh...</p>
+					<p>Maybe we can live without...</p>
+					<p class="break-before-column">Look. If you think this is...</p>
+					<p>Look. If you think this is...</p>
+				</div>
+				<div>
+					<h2>text-decoration</h2>
+				</div>
+				<div class="mb-4">
+					<span class="box-decoration-slice hover:box-decoration-clone bg-gradient-to-r from-blue-600 to-pink-500 text-white px-2">
+						Hello<br />
+						World
+					</span>
+					<br />
+					<span class="box-decoration-clone hover:box-decoration-slice bg-gradient-to-r from-blue-600 to-pink-500 text-white px-2">
+						Hello<br />
+						World
+					</span>
+				</div>
+				<div>
+					<h2>border-box</h2>
+				</div>
+				<div class="mb-4">
+					<button class="box-content h-20 w-20 p-3 border-slate-700 border-solid border-4 bg-blue-400">Click Here</button>
+					<button class="p-3 h-20 w-20 bg-blue-400">Click Here</button>
+					<button class="box-border h-20 w-20 p-3 border-slate-700 border-solid border-4 bg-blue-400">Click Here</button>
+				</div>
+				<h2>display-block/inline-block/inline</h2>
+				<div class="w-[500px] mb-4">
+					When controlling the flow of text, using the CSS property
+					<span class="inline">display: inline</span>
+					will cause the text inside the element to wrap normally. While using the property <span class="inline-block">display: inline-block</span> will wrap the element to prevent the text inside from extending beyond its parent. Lastly, using the property <span class="block">display: block</span>
+					will put the element on its own line and fill its parent.
+					<hr />
+					<h2>inline-flex</h2>
+					<p>
+						Today I spent most of the day researching ways to ...
+						<span class="inline-flex items-baseline">
+							<img src="./src/images/image.png" alt="img" height="20" width="20" title="image" class="self-center w-5 h-5 rounded-md mx-1" />
+							<span>Kramer</span>
+						</span>
+						keeps telling me there is no way to make it work, that ...
+					</p>
+				</div>
+				<h2>Grid</h2>
+				<div class="grid gap-4 grid-cols-3 grid-rows-3">
+					<div class="custom-div">01</div>
+					<div class="custom-div">02</div>
+					<div class="custom-div">03</div>
+					<div class="custom-div">04</div>
+					<div class="custom-div">05</div>
+					<div class="custom-div">06</div>
+				</div>
+				<h2>inline-grid</h2>
+				<div>
+					<span class="inline-grid grid-cols-3 gap-4 mb-4">
+						<span class="custom-div">01</span>
+						<span class="custom-div">02</span>
+						<span class="custom-div">03</span>
+						<span class="custom-div">04</span>
+						<span class="custom-div">05</span>
+						<span class="custom-div">06</span>
+					</span>
+				</div>
+				<h2>flex</h2>
+				<div class="flex gap-6 mb-4">
+					<div class="custom-div w-52">01</div>
+					<div class="custom-div w-52">02</div>
+					<div class="custom-div w-52">03</div>
+					<div class="custom-div w-52">04</div>
+					<div class="custom-div w-52">05</div>
+					<div class="custom-div w-52">06</div>
+				</div>
+				<h2>float</h2>
+				<div class="mb-4">
+					<img class="float-right hover:float-none" src="./src/images/image.png" alt="img" height="30" width="40" title="logo" />
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore et quis quia ducimus, mollitia pariatur eius nulla obcaecati eos aliquam est quos minus culpa neque nihil repellendus dolor in nostrum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae magnam voluptatibus tenetur porro temporibus, doloribus voluptate ab aliquid totam. Impedit commodi sint inventore possimus eius magnam beatae, officia nihil dignissimos!</p>
+				</div>
+				<div>
+					<img class="float-left mr-2" src="./src/images/image.png" alt="img" height="30" width="40" title="logo" />
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore et quis quia ducimus, mollitia pariatur eius nulla obcaecati eos aliquam est quos minus culpa neque nihil repellendus dolor in nostrum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae magnam voluptatibus tenetur porro temporibus, doloribus voluptate ab aliquid totam. Impedit commodi sint inventore possimus eius magnam beatae, officia nihil dignissimos!</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

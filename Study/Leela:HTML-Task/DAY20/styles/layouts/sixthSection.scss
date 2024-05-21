@@ -1,0 +1,131 @@
+@import '../common/mixin.scss';
+@import '../common/variable.scss';
+
+.reservation-section {
+	div {
+		position: relative;
+		text-align: center;
+		@include mainWidth;
+		margin: 0 auto;
+		h2 {
+			font-size: 15px;
+			letter-spacing: 2px;
+			line-height: 10px;
+			text-transform: uppercase;
+			color: $custom-black;
+			font-weight: 700;
+			font-family: $play-fare;
+			@include for-tablet {
+				font-size: 29px;
+			}
+		}
+		h3 {
+			font-size: 32px;
+			letter-spacing: 4px;
+			line-height: 20px;
+			@include blue;
+			font-weight: 700;
+			font-family: $play-fare;
+			@include for-tablet {
+				padding-bottom: 40px;
+				font-size: 63px;
+			}
+		}
+		form {
+			& ::after {
+				content: '';
+				background-image: url('./assets/images/foodWithCutlery.webp');
+				background-size: cover;
+				position: absolute;
+				height: 130px;
+				width: 125px;
+				bottom: -23%;
+				left: 1px;
+				@include for-tablet {
+					height: 180px;
+					width: 170px;
+					bottom: -32%;
+					left: 1px;
+				}
+				@include for-desktop {
+					height: 339px;
+					width: 328px;
+					top: 83%;
+					left: -4%;
+				}
+			}
+			display: grid;
+			grid-template-columns: auto;
+			padding: 30px;
+			@include for-tablet {
+				grid-template-columns: auto auto;
+				max-width: 650px;
+			}
+			@include for-desktop {
+				max-width: 850px;
+			}
+			@include col-gap(25px);
+			row-gap: 25px;
+			margin: 0 auto;
+			input {
+				border-radius: 5px;
+				background-color: rgba(235, 174, 76, 0);
+				border: 1px solid $light-gray;
+				color: $custom-black;
+				font-weight: 400;
+				padding: 15px;
+				font-family: $play-fare;
+				box-sizing: border-box;
+				font-size: 16px;
+				@include for-tablet {
+					line-height: 33px;
+					font-size: 18px;
+				}
+				@include for-desktop {
+					line-height: 43px;
+					font-size: 21px;
+				}
+			}
+			button {
+				border-radius: 5px;
+				@include bg-blue;
+				padding: 15px;
+				text-transform: uppercase;
+				color: $custom-white;
+				font-weight: 700;
+				font-family: $play-fare;
+				border: 0;
+				box-sizing: border-box;
+				font-size: 16px;
+				transition: all 500ms ease-in-out;
+				@include for-tablet {
+					font-size: 21px;
+				}
+			}
+			button:hover {
+				cursor: pointer;
+				background-color: $dark-blue;
+			}
+		}
+		img {
+			filter: drop-shadow(15.358px 14.322px 16px rgba(0, 0, 0, 0.41));
+			position: absolute;
+			height: 60px;
+			width: 60px;
+			top: 11%;
+			right: 1px;
+			@include for-tablet {
+				height: 111px;
+				width: 110px;
+				top: 20%;
+				right: 10px;
+			}
+			@include for-desktop {
+				height: 137px;
+				width: 136px;
+				right: 10%;
+				top: 23%;
+			}
+		}
+	}
+}

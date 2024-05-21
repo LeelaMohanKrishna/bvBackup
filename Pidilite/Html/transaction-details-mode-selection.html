@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cyno</title>
+		<link rel="stylesheet" href="./css/custom.css" />
+	</head>
+	<body>
+		<div class="main-wrapper flex m-auto flex-column">
+			<!-- <img src="./images/welcome.gif" class="m-auto welcome-gif"/> -->
+			<div class="banner-gif"></div>
+			<div class="content-wrapper flex flex-column flex-auto phone-verify">
+				<div class="text-with-icon flex flex-space-between flex-align-start">
+					<div>
+						<h3>Preferred Payment Method</h3>
+						<h6>Choose your preferred payment method</h6>
+					</div>
+					<button type="button" class="btn-small"><i class="ci-logout"></i>Logout</button>
+				</div>
+				<div class="box flex flex-wrap box-1">
+					<h6 class="w-full">Select Document</h6>
+					<div class="box-wrapper">
+						<input type="radio" id="ac" name="payment" />
+						<label for="ac"></label>
+						<div class="flex flex-align-center box-section">
+							<i class="ci-bank-ac"></i>
+							<div class="">
+								<h3>Bank Account</h3>
+								<h6>Use bank details for transaction</h6>
+							</div>
+						</div>
+					</div>
+					<div class="box-wrapper">
+						<input type="radio" id="upi" name="payment" />
+						<label for="upi"></label>
+						<div class="flex flex-align-center box-section">
+							<i class="ci-upi"><span class="path1"></span><span class="path2"></span></i>
+							<div class="">
+								<h3>UPI</h3>
+								<h6>Use UPI for transaction</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-auto flex flex-column">
+					<div class="form-group">
+						<div class="custom-checkbox">
+							<input type="checkbox" id="t&c">
+							<i class="ci-checkbox checkbox"></i>
+							<i class="ci-checked checked"></i>
+							<label for="t&c" class="control-label inline-block">I accept all the Terms & Conditions.</label>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-bottom" disabled>Proceed</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

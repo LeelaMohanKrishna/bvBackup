@@ -1,0 +1,92 @@
+/* Universal selector */
+* {
+    background-color: aqua;
+}
+
+/* Element selector */
+h1 {
+    color: darkgoldenrod;
+}
+
+/* id selector */
+#para {
+    font-weight: bold;
+    font-size: large;
+}
+
+/* class selector */
+.para-content {
+    font-weight: lighter;
+    font-size: medium;
+}
+
+/* Grouping selector */
+h2, h3 {
+    color: blue;
+}
+
+/* 
+* CSS Combinators
+* Descendent
+*/
+div p {
+    padding: 5px;
+    background-color: burlywood;
+}
+
+/* Child selectors */
+div > p {
+    padding: 5px;
+    background-color: yellow;
+}
+
+/* General Sibling Selector */
+div ~ p {
+    padding: 5px;
+    background-color: blue;
+}
+
+/* Adjacent Sibling Selector */
+div + p {
+    padding: 5px;
+    background-color: tomato;
+}
+
+.pseudo-content::first-letter {
+    font-size: xx-large;
+    color: rgb(13, 13, 94);
+}
+
+.pseudo-content::first-line {
+    font-size: medium;
+    color: rgb(13, 179, 77);
+}
+
+.pseudo-content::selection {
+    background-color: rgb(46, 161, 104);
+    color: rgb(1, 9, 15);
+}
+
+ul {
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+::marker {
+    color: green;
+}
+
+.container {
+    background-color: skyblue;
+    padding: 10px;
+    margin: 10px;
+    width: fit-content;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 8px;
+    position: absolute;
+    left: 93%;
+    top: 550px;
+    display: flex;
+    flex-direction: column;
+}

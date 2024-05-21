@@ -1,0 +1,1353 @@
+    : values.contractortype === 'Site Supervisor' ? 
+     <Grid
+     container
+     direction="row"
+     justify="center"
+     alignItems="center"
+     style={{ padding: 10 }}
+   >     
+     <Grid item xs={12}>
+       <TextField
+         required
+         name="firstname"
+         value={values.firstname || ""}
+         onChange={handleChange}
+         label="First Name"
+         className={classes.textField}
+         fullWidth={true}
+         margin="normal"
+         disabled={props.status.isDisabled}
+         onBlur={handleBlur}
+         helperText={
+           errors.firstname && touched.firstname ? errors.firstname : null
+         }
+         error={errors.firstname && touched.firstname}
+       />
+     </Grid>
+
+     <Grid item xs={12}>
+       <TextField
+         name="middlename"
+         value={values.middlename || ""}
+         onChange={handleChange}
+         label="Middle Name"
+         className={classes.textField}
+         fullWidth={true}
+         margin="normal"
+         disabled={props.status.isDisabled}
+         helperText={
+           errors.middlename && touched.middlename
+             ? errors.middlename
+             : null
+         }
+         error={errors.middlename && touched.middlename}
+       />
+     </Grid>
+
+     <Grid item xs={12}style={{ marginBottom: "-5px"}}>
+       <TextField
+         required
+         name="lastname"
+         value={values.lastname || ""}
+         onChange={handleChange}
+         label="Last Name"
+         className={classes.textField}
+         fullWidth={true}
+         margin="normal"
+         disabled={props.status.isDisabled}
+         onBlur={handleBlur}
+         helperText={
+           errors.lastname && touched.lastname ? errors.lastname : null
+         }
+         error={errors.lastname && touched.lastname}
+       />
+     </Grid>
+
+     {props.location.pathname == "/cc/leads/lead/basic-details" ? (
+          <Grid item xs={12}>
+            <TextField
+              required
+              name="primarymobileno"
+              value={values.primarymobileno || ""}
+              type="number"
+              onInput={async (e)=>{ 
+                const slicedMobileNo = e.target.value.slice(0, 10);
+                 e.target.value= e.target.value.slice(0,10);
+                 e.target.value.length == 10 ?
+                 (await actions.CheckExistingNumberCC({
+                   "primary_mobile_number": slicedMobileNo,
+                   "divisioncode_c": JSON.parse(localStorage.getItem('user')).divisionid__c,
+                   "salesgroupcode_c" : JSON.parse(localStorage.getItem('user')).salesgroupid__c,
+                   "producthierarchycode_c":  JSON.parse(localStorage.getItem('user')).producthierarchycode__c,
+                   "account_id": props.location.pathname == "/cc/end-user/basic-details" && (props && props.location && props.location.state && props.location.state.id && props.location.state.id )? props.location.state.id : null,
+                   "lead_id": props.location.pathname == "/cc/leads/lead/basic-details" &&(props && props.location && props.location.state && props.location.state.id && props.location.state.id) ? props.location.state.id : null
+                 }) , await actions.CheckExistingNumberInBasant({ "mobileNo": slicedMobileNo}) )
+                 : null
+                 await primaryMobileExistingFlag && primaryMobileExistingFlag.data ? setFieldValue('primaryMobileExist', true) : setFieldValue('primaryMobileExist', false)
+               }}
+              onChange={handleChange}
+              label="Influencer Mobile No"
+              className={classes.textField}
+              fullWidth={true}
+              disabled={values.id || values.sfid}
+              helperText={
+                errors.primarymobileno && touched.primarymobileno
+                  ? errors.primarymobileno
+                  : primaryMobileExistingFlag && primaryMobileExistingFlag.data ? primaryMobileExistingFlag.message
+                  : null
+              }
+              error={(errors.primarymobileno && touched.primarymobileno) || (primaryMobileExistingFlag && primaryMobileExistingFlag.data)}
+            />
+          </Grid>
+        ) : (
+          <Grid item xs={12} style={{ marginTop: "5px"}}>
+            <TextField
+            required
+              name="primarymobileno"
+              value={values.primarymobileno || ""}
+              type="number"
+              onInput={(e)=>{
+                e.target.value = e.target.value.slice(0,10);
+              }}
+              onChange={handleChange}
+              label="Mobile Number"
+              className={classes.textField}
+              fullWidth={true}
+              disabled={true}
+              helperText={
+                errors.primarymobileno && touched.primarymobileno
+                  ? errors.primarymobileno
+                  : null
+              }
+              error={errors.primarymobileno && touched.primarymobileno}
+            />
+          </Grid>
+        )}
+
+     <Grid item xs={12} style={{ marginTop: "5px"}}>
+
+     <Grid xs={12} style={{ marginBottom: "5px"}}>
+       <TextField
+         name="email"
+         value={values.email || ''}
+         onChange={handleChange}
+         label="Email ID"
+         type="email"
+         className={classes.textField}
+         fullWidth={true}
+         disabled={props.status.isDisabled}
+         helperText={
+           errors.email && (touched.email)
+             ? errors.email
+             : null
+         }
+         error={errors.email && (touched.email)}
+       />
+     </Grid>
+
+     <Grid xs={12} style={{ marginBottom: "5px"}}>
+       <TextField
+         required
+         type="number"
+         name="total_year_of_experience__c"
+         value={values.total_year_of_experience__c || ""}
+         onChange={handleChange}
+         label="Total Number of Years in Experience"
+         className={classes.textField}
+         fullWidth={true}
+         margin="normal"
+         disabled={props.status.isDisabled}
+         onBlur={handleBlur}
+         helperText={
+           errors.total_year_of_experience__c && touched.total_year_of_experience__c ? errors.total_year_of_experience__c : null
+         }
+         error={errors.total_year_of_experience__c && touched.total_year_of_experience__c}
+       />
+     </Grid>
+
+     <Grid xs={12} style={{ marginTop: "5px"}}>
+        <TextField
+          select
+          margin="normal"
+          name="variable_contractor_type__c"
+          fullWidth={true}
+          label="Select Reporting Person"
+          className={classes.textField}
+          value={values.variable_contractor_type__c || ''}
+          disabled={props.status.isDisabled}
+          onBlur={handleBlur}
+          onChange={(e) => {
+            setFieldValue("variable_contractor_type__c", e.target.value);
+          }}
+          helperText={
+            errors.variable_contractor_type__c && touched.variable_contractor_type__c
+              ? errors.variable_contractor_type__c
+              : null
+          }
+          error={errors.variable_contractor_type__c && touched.variable_contractor_type__c}
+          >
+            <MenuItem value={"Builder"}>Builder</MenuItem>
+            <MenuItem value={"Influencer"}>Influencer</MenuItem>
+            <MenuItem value={"User"}>User</MenuItem>
+        </TextField>
+     </Grid>
+
+     <Grid xs={12} style={{ marginTop: "5px"}}>
+        <TextField
+          select
+          margin="normal"
+          name="variable_contractor_type__c"
+          fullWidth={true}
+          label="List of Reporting Person"
+          className={classes.textField}
+          value={values.variable_contractor_type__c || ''}
+          disabled={props.status.isDisabled}
+          onBlur={handleBlur}
+          onChange={(e) => {
+            setFieldValue("variable_contractor_type__c", e.target.value);
+          }}
+          helperText={
+            errors.variable_contractor_type__c && touched.variable_contractor_type__c
+              ? errors.variable_contractor_type__c
+              : null
+          }
+          error={errors.variable_contractor_type__c && touched.variable_contractor_type__c}
+          >
+            <MenuItem value={"Builder"}>Builder</MenuItem>
+            <MenuItem value={"Influencer"}>Influencer</MenuItem>
+            <MenuItem value={"User"}>User</MenuItem>
+        </TextField>
+     </Grid>
+
+     <Grid item xs={12} style={{ marginTop: "5px"}}>
+       <TextField
+         required
+         name="permanentaddress1"
+         value={values.permanentaddress1 || ""}
+         onChange={handleChange}
+         label="Permanent Address (as in ID)"
+         className={classes.textField}
+         fullWidth={true}
+         disabled={props.status.isDisabled}
+         multiline
+         helperText={
+           errors.permanentaddress1 && touched.permanentaddress1
+             ? errors.permanentaddress1
+             : null
+         }
+         error={errors.permanentaddress1 && touched.permanentaddress1}
+       ></TextField>
+     </Grid>
+     </Grid>
+
+     <Grid item xs={12} style={{ marginTop: 10, marginBottom: 10 }}>
+         {props.status.isDisabled ?
+           <Button
+             disabled={isSubmitting}
+             onClick={() => { setStatus({ isDisabled: false }); }}
+             fullWidth={true}
+             variant="contained"
+             color="primary"
+           >
+             Edit
+           </Button>
+         : null}
+     </Grid>
+
+     <Grid item xs={12} style={{ marginTop: 10, marginBottom: 10 }}>
+       {!props.status.isDisabled ?
+         <Button
+           disabled={isSubmitting}
+           type="submit"
+           onClick={() => { saveDisable = true; }}
+           fullWidth={true}
+           variant="contained"
+           color="primary"
+         >
+           SAVE
+         </Button>
+       : null}
+     </Grid>
+
+ </Grid>
+      : values.contractortype === 'Technician' ? 
+      <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      style={{ padding: 10 }}
+    >     
+      <Grid item xs={12}>
+        <TextField
+          required
+          name="firstname"
+          value={values.firstname || ""}
+          onChange={handleChange}
+          label="First Name"
+          className={classes.textField}
+          fullWidth={true}
+          margin="normal"
+          disabled={props.status.isDisabled}
+          onBlur={handleBlur}
+          helperText={
+            errors.firstname && touched.firstname ? errors.firstname : null
+          }
+          error={errors.firstname && touched.firstname}
+        />
+      </Grid>
+ 
+      <Grid item xs={12}>
+        <TextField
+          id="outlined-required-helper-text"
+          name="middlename"
+          value={values.middlename || ""}
+          onChange={handleChange}
+          label="Middle Name"
+          className={classes.textField}
+          fullWidth={true}
+          margin="normal"
+          disabled={props.status.isDisabled}
+          helperText={
+            errors.middlename && touched.middlename
+              ? errors.middlename
+              : null
+          }
+          error={errors.middlename && touched.middlename}
+        />
+      </Grid>
+ 
+      <Grid item xs={12}style={{ marginBottom: "-5px"}}>
+        <TextField
+          required
+          name="lastname"
+          id="outlined-required-helper-text"
+          value={values.lastname || ""}
+          onChange={handleChange}
+          label="Last Name"
+          className={classes.textField}
+          fullWidth={true}
+          margin="normal"
+          disabled={props.status.isDisabled}
+          onBlur={handleBlur}
+          helperText={
+            errors.lastname && touched.lastname ? errors.lastname : null
+          }
+          error={errors.lastname && touched.lastname}
+        />
+      </Grid>
+ 
+      {props.location.pathname == "/cc/leads/lead/basic-details" ? (
+        <Grid item xs={12}>
+          <TextField
+          required
+            name="phone"
+            value={values.phone || ""}
+            type="number"
+            onInput={ async (e)=>{ 
+             const slicedMobileNo = e.target.value.slice(0, 10);
+              e.target.value= e.target.value.slice(0,10);
+              e.target.value.length == 10 ?
+              (await actions.CheckExistingNumberCC({
+                "primary_mobile_number": slicedMobileNo,
+                "divisioncode_c": JSON.parse(localStorage.getItem('user')).divisionid__c,
+                "salesgroupcode_c" : JSON.parse(localStorage.getItem('user')).salesgroupid__c,
+                "producthierarchycode_c":  JSON.parse(localStorage.getItem('user')).producthierarchycode__c,
+                "account_id": props.location.pathname == "/cc/end-user/basic-details" && (props && props.location && props.location.state && props.location.state.id && props.location.state.id) ? props.location.state.id : null,
+                "lead_id": props.location.pathname == "/cc/leads/lead/basic-details" &&(props && props.location && props.location.state && props.location.state.id && props.location.state.id) ? props.location.state.id : null
+              }) , await actions.CheckExistingNumberInBasant({ "mobileNo": slicedMobileNo}) )
+              : null
+              await primaryMobileExistingFlag && primaryMobileExistingFlag.data ? setFieldValue('primaryMobileExist', true) : setFieldValue('primaryMobileExist', false)
+            }}
+            onChange={handleChange}
+            label="Mobile Number"
+            className={classes.textField}
+            fullWidth={true}
+            disabled={values.id || values.sfid}
+            helperText={
+              errors.primarymobileno && touched.primarymobileno
+                ? errors.primarymobileno
+                : primaryMobileExistingFlag && primaryMobileExistingFlag.data ? primaryMobileExistingFlag.message
+                : null
+            }
+            error={(errors.primarymobileno && touched.primarymobileno) || (primaryMobileExistingFlag && primaryMobileExistingFlag.data)}
+          />
+        </Grid>
+      ) : (
+        <Grid item xs={12} style={{ marginTop: "5px"}}>
+          <TextField
+          required
+            name="phone"
+            value={values.phone || ""}
+            type="number"
+            onInput={async (e)=>{
+              e.target.value = e.target.value.slice(0,10);
+            }}
+            onChange={handleChange}
+            label="Mobile Number"
+            className={classes.textField}
+            fullWidth={true}
+            disabled={true}
+            helperText={
+              errors.phone && touched.phone
+                ? errors.phone
+                : null
+            }
+            error={(errors.phone && touched.phone)}
+          />
+        </Grid>
+      )}
+ 
+      <Grid item xs={12} style={{ marginTop: "5px"}}> 
+      <Grid xs={12} style={{ marginBottom: "5px"}}>
+        <TextField
+          name="email"
+          value={values.email || ''}
+          onChange={handleChange}
+          label="Email ID"
+          type="email"
+          className={classes.textField}
+          fullWidth={true}
+          disabled={props.status.isDisabled}
+          helperText={
+            errors.email && (touched.email)
+              ? errors.email
+              : null
+          }
+          error={errors.email && (touched.email)}
+        />
+      </Grid>
+ 
+      <Grid xs={12} style={{ marginBottom: "5px"}}>
+        <TextField
+          required
+          type="number"
+          name="total_year_of_experience__c"
+          id="outlined-required-helper-text"
+          value={values.total_year_of_experience__c || ""}
+          onChange={handleChange}
+          label="Total Number of Years in Experience"
+          className={classes.textField}
+          fullWidth={true}
+          margin="normal"
+          disabled={props.status.isDisabled}
+          onBlur={handleBlur}
+          helperText={
+            errors.total_year_of_experience__c && touched.total_year_of_experience__c ? errors.total_year_of_experience__c : null
+          }
+          error={errors.total_year_of_experience__c && touched.total_year_of_experience__c}
+        />
+      </Grid>
+ 
+      <Grid xs={12} style={{ marginTop: "5px"}}>
+         <TextField
+           select
+           margin="normal"
+           name="variable_contractor_type__c"
+           fullWidth={true}
+           label="Select Reporting Person"
+           className={classes.textField}
+           value={values.variable_contractor_type__c || ''}
+           disabled={props.status.isDisabled}
+           onBlur={handleBlur}
+           onChange={(e) => {
+             setFieldValue("variable_contractor_type__c", e.target.value);
+           }}
+           helperText={
+             errors.variable_contractor_type__c && touched.variable_contractor_type__c
+               ? errors.variable_contractor_type__c
+               : null
+           }
+           error={errors.variable_contractor_type__c && touched.variable_contractor_type__c}
+           >
+             <MenuItem value={"User"}>User</MenuItem>
+         </TextField>
+      </Grid>
+ 
+      <Grid item xs={12} style={{ marginTop: "5px"}}>
+        <TextField
+          required
+          name="permanent_address1__c"
+          value={values.permanent_address1__c || ""}
+          onChange={handleChange}
+          label="Permanent Address (as in ID)"
+          className={classes.textField}
+          fullWidth={true}
+          disabled={props.status.isDisabled}
+          multiline
+          helperText={
+            errors.permanent_address1__c && touched.permanent_address1__c
+              ? errors.permanent_address1__c
+              : null
+          }
+          error={errors.permanent_address1__c && touched.permanent_address1__c}
+        ></TextField>
+      </Grid>
+      </Grid>
+
+        <Grid item xs={12} style={{ marginTop: 10, marginBottom: 10 }}>
+          {props.status.isDisabled ?
+            <Button
+              disabled={isSubmitting}
+              onClick={() => { setStatus({ isDisabled: false }); }}
+              fullWidth={true}
+              variant="contained"
+              color="primary"
+            >
+              Edit
+            </Button>
+          : null}
+        </Grid>
+ 
+      <Grid item xs={12} style={{ marginTop: 10, marginBottom: 10 }}>
+        {!props.status.isDisabled ?
+          <Button
+            disabled={isSubmitting}
+            type="submit"
+            onClick={() => { saveDisable = true; }}
+            fullWidth={true}
+            variant="contained"
+            color="primary"
+          >
+            SAVE
+          </Button>
+        : null}
+      </Grid>
+ 
+  </Grid>
+       : values.contractortype === 'Site Engineer' ? 
+       <Grid
+       container
+       direction="row"
+       justify="center"
+       alignItems="center"
+       style={{ padding: 10 }}
+     >     
+       <Grid item xs={12}>
+         <TextField
+           required
+           name="firstname"
+           value={values.firstname || ""}
+           onChange={handleChange}
+           label="First Name"
+           className={classes.textField}
+           fullWidth={true}
+           margin="normal"
+           disabled={props.status.isDisabled}
+           onBlur={handleBlur}
+           helperText={
+             errors.firstname && touched.firstname ? errors.firstname : null
+           }
+           error={errors.firstname && touched.firstname}
+         />
+       </Grid>
+  
+       <Grid item xs={12}>
+         <TextField
+           id="outlined-required-helper-text"
+           name="middlename"
+           value={values.middlename || ""}
+           onChange={handleChange}
+           label="Middle Name"
+           className={classes.textField}
+           fullWidth={true}
+           margin="normal"
+           disabled={props.status.isDisabled}
+           helperText={
+             errors.middlename && touched.middlename
+               ? errors.middlename
+               : null
+           }
+           error={errors.middlename && touched.middlename}
+         />
+       </Grid>
+  
+       <Grid item xs={12}style={{ marginBottom: "-5px"}}>
+         <TextField
+           required
+           name="lastname"
+           id="outlined-required-helper-text"
+           value={values.lastname || ""}
+           onChange={handleChange}
+           label="Last Name"
+           className={classes.textField}
+           fullWidth={true}
+           margin="normal"
+           disabled={props.status.isDisabled}
+           onBlur={handleBlur}
+           helperText={
+             errors.lastname && touched.lastname ? errors.lastname : null
+           }
+           error={errors.lastname && touched.lastname}
+         />
+       </Grid>
+  
+       {props.location.pathname == "/cc/leads/lead/basic-details" ? (
+         <Grid item xs={12}>
+           <TextField
+           required
+             name="phone"
+             value={values.phone || ""}
+             type="number"
+             onInput={ async (e)=>{ 
+              const slicedMobileNo = e.target.value.slice(0, 10);
+               e.target.value= e.target.value.slice(0,10);
+               e.target.value.length == 10 ?
+               (await actions.CheckExistingNumberCC({
+                 "primary_mobile_number": slicedMobileNo,
+                 "divisioncode_c": JSON.parse(localStorage.getItem('user')).divisionid__c,
+                 "salesgroupcode_c" : JSON.parse(localStorage.getItem('user')).salesgroupid__c,
+                 "producthierarchycode_c":  JSON.parse(localStorage.getItem('user')).producthierarchycode__c,
+                 "account_id": props.location.pathname == "/cc/end-user/basic-details" && (props && props.location && props.location.state && props.location.state.id && props.location.state.id) ? props.location.state.id : null,
+                 "lead_id": props.location.pathname == "/cc/leads/lead/basic-details" &&(props && props.location && props.location.state && props.location.state.id && props.location.state.id) ? props.location.state.id : null
+               }) , await actions.CheckExistingNumberInBasant({ "mobileNo": slicedMobileNo}) )
+               : null
+               await primaryMobileExistingFlag && primaryMobileExistingFlag.data ? setFieldValue('primaryMobileExist', true) : setFieldValue('primaryMobileExist', false)
+             }}
+             onChange={handleChange}
+             label="Mobile Number"
+             className={classes.textField}
+             fullWidth={true}
+             disabled={values.id || values.sfid}
+             helperText={
+               errors.primarymobileno && touched.primarymobileno
+                 ? errors.primarymobileno
+                 : primaryMobileExistingFlag && primaryMobileExistingFlag.data ? primaryMobileExistingFlag.message
+                 : null
+             }
+             error={(errors.primarymobileno && touched.primarymobileno) || (primaryMobileExistingFlag && primaryMobileExistingFlag.data)}
+           />
+         </Grid>
+       ) : (
+         <Grid item xs={12} style={{ marginTop: "5px"}}>
+           <TextField
+           required
+             name="phone"
+             value={values.phone || ""}
+             type="number"
+             onInput={async (e)=>{
+               e.target.value = e.target.value.slice(0,10);
+             }}
+             onChange={handleChange}
+             label="Mobile Number"
+             className={classes.textField}
+             fullWidth={true}
+             disabled={true}
+             helperText={
+               errors.phone && touched.phone
+                 ? errors.phone
+                 : null
+             }
+             error={(errors.phone && touched.phone)}
+           />
+         </Grid>
+       )}
+  
+       <Grid item xs={12} style={{ marginTop: "5px"}}>
+       <Grid xs={12} style={{ marginBottom: "5px"}}>
+         <TextField
+           name="email"
+           value={values.email || ''}
+           onChange={handleChange}
+           label="Email ID"
+           type="email"
+           className={classes.textField}
+           fullWidth={true}
+           disabled={props.status.isDisabled}
+           helperText={
+             errors.email && (touched.email)
+               ? errors.email
+               : null
+           }
+           error={errors.email && (touched.email)}
+         />
+       </Grid>
+  
+       <Grid xs={12} style={{ marginBottom: "5px"}}>
+         <TextField
+           required
+           type="number"
+           name="total_year_of_experience__c"
+           id="outlined-required-helper-text"
+           value={values.total_year_of_experience__c || ""}
+           onChange={handleChange}
+           label="Total Number of Years in Experience"
+           className={classes.textField}
+           fullWidth={true}
+           margin="normal"
+           disabled={props.status.isDisabled}
+           onBlur={handleBlur}
+           helperText={
+             errors.total_year_of_experience__c && touched.total_year_of_experience__c ? errors.total_year_of_experience__c : null
+           }
+           error={errors.total_year_of_experience__c && touched.total_year_of_experience__c}
+         />
+       </Grid>
+  
+       <Grid xs={12} style={{ marginTop: "5px"}}>
+          <TextField
+            select
+            margin="normal"
+            name="variable_contractor_type__c"
+            fullWidth={true}
+            label="Select Reporting Person"
+            className={classes.textField}
+            value={values.variable_contractor_type__c || ''}
+            disabled={props.status.isDisabled}
+            onBlur={handleBlur}
+            onChange={(e) => {
+              setFieldValue("variable_contractor_type__c", e.target.value);
+            }}
+            helperText={
+              errors.variable_contractor_type__c && touched.variable_contractor_type__c
+                ? errors.variable_contractor_type__c
+                : null
+            }
+            error={errors.variable_contractor_type__c && touched.variable_contractor_type__c}
+            >
+              <MenuItem value={"Builder"}>Builder</MenuItem>
+              <MenuItem value={"Influencer"}>Influencer</MenuItem>
+          </TextField>
+       </Grid>
+  
+       <Grid xs={12} style={{ marginTop: "5px"}}>
+          <TextField
+            select
+            margin="normal"
+            name="variable_contractor_type__c"
+            fullWidth={true}
+            label="List of Reporting Person"
+            className={classes.textField}
+            value={values.variable_contractor_type__c || ''}
+            disabled={props.status.isDisabled}
+            onBlur={handleBlur}
+            onChange={(e) => {
+              setFieldValue("variable_contractor_type__c", e.target.value);
+            }}
+            helperText={
+              errors.variable_contractor_type__c && touched.variable_contractor_type__c
+                ? errors.variable_contractor_type__c
+                : null
+            }
+            error={errors.variable_contractor_type__c && touched.variable_contractor_type__c}
+            >
+              <MenuItem value={"Builder"}>Builder</MenuItem>
+              <MenuItem value={"Influencer"}>Influencer</MenuItem>
+          </TextField>
+       </Grid>
+  
+       <Grid item xs={12} style={{ marginTop: "5px"}}>
+         <TextField
+           required
+           name="permanent_address1__c"
+           value={values.permanent_address1__c || ""}
+           onChange={handleChange}
+           label="Permanent Address (as in ID)"
+           className={classes.textField}
+           fullWidth={true}
+           disabled={props.status.isDisabled}
+           multiline
+           helperText={
+             errors.permanent_address1__c && touched.permanent_address1__c
+               ? errors.permanent_address1__c
+               : null
+           }
+           error={errors.permanent_address1__c && touched.permanent_address1__c}
+         ></TextField>
+       </Grid>
+       </Grid>
+         <Grid item xs={12} style={{ marginTop: 10, marginBottom: 10 }}>
+           {props.status.isDisabled ?
+             <Button
+               disabled={isSubmitting}
+               onClick={() => { setStatus({ isDisabled: false }); }}
+               fullWidth={true}
+               variant="contained"
+               color="primary"
+             >
+               Edit
+             </Button>
+           : null}
+         </Grid>
+  
+       <Grid item xs={12} style={{ marginTop: 10, marginBottom: 10 }}>
+         {!props.status.isDisabled ?
+           <Button
+             disabled={isSubmitting}
+             type="submit"
+             onClick={() => { saveDisable = true; }}
+             fullWidth={true}
+             variant="contained"
+             color="primary"
+           >
+             SAVE
+           </Button>
+         : null}
+       </Grid>
+  
+   </Grid>
+        : values.contractortype === 'Purchase Manager' ? 
+        <Grid
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+        style={{ padding: 10 }}
+      >     
+        <Grid item xs={12}>
+          <TextField
+            required
+            name="firstname"
+            value={values.firstname || ""}
+            onChange={handleChange}
+            label="First Name"
+            className={classes.textField}
+            fullWidth={true}
+            margin="normal"
+            disabled={props.status.isDisabled}
+            onBlur={handleBlur}
+            helperText={
+              errors.firstname && touched.firstname ? errors.firstname : null
+            }
+            error={errors.firstname && touched.firstname}
+          />
+        </Grid>
+   
+        <Grid item xs={12}>
+          <TextField
+            id="outlined-required-helper-text"
+            name="middlename"
+            value={values.middlename || ""}
+            onChange={handleChange}
+            label="Middle Name"
+            className={classes.textField}
+            fullWidth={true}
+            margin="normal"
+            disabled={props.status.isDisabled}
+            helperText={
+              errors.middlename && touched.middlename
+                ? errors.middlename
+                : null
+            }
+            error={errors.middlename && touched.middlename}
+          />
+        </Grid>
+   
+        <Grid item xs={12}style={{ marginBottom: "-5px"}}>
+          <TextField
+            required
+            name="lastname"
+            id="outlined-required-helper-text"
+            value={values.lastname || ""}
+            onChange={handleChange}
+            label="Last Name"
+            className={classes.textField}
+            fullWidth={true}
+            margin="normal"
+            disabled={props.status.isDisabled}
+            onBlur={handleBlur}
+            helperText={
+              errors.lastname && touched.lastname ? errors.lastname : null
+            }
+            error={errors.lastname && touched.lastname}
+          />
+        </Grid>
+   
+        {props.location.pathname == "/cc/leads/lead/basic-details" ? (
+          <Grid item xs={12}>
+            <TextField
+            required
+              name="phone"
+              value={values.phone || ""}
+              type="number"
+              onInput={ async (e)=>{ 
+               const slicedMobileNo = e.target.value.slice(0, 10);
+                e.target.value= e.target.value.slice(0,10);
+                e.target.value.length == 10 ?
+                (await actions.CheckExistingNumberCC({
+                  "primary_mobile_number": slicedMobileNo,
+                  "divisioncode_c": JSON.parse(localStorage.getItem('user')).divisionid__c,
+                  "salesgroupcode_c" : JSON.parse(localStorage.getItem('user')).salesgroupid__c,
+                  "producthierarchycode_c":  JSON.parse(localStorage.getItem('user')).producthierarchycode__c,
+                  "account_id": props.location.pathname == "/cc/end-user/basic-details" && (props && props.location && props.location.state && props.location.state.id && props.location.state.id) ? props.location.state.id : null,
+                  "lead_id": props.location.pathname == "/cc/leads/lead/basic-details" &&(props && props.location && props.location.state && props.location.state.id && props.location.state.id) ? props.location.state.id : null
+                }) , await actions.CheckExistingNumberInBasant({ "mobileNo": slicedMobileNo}) )
+                : null
+                await primaryMobileExistingFlag && primaryMobileExistingFlag.data ? setFieldValue('primaryMobileExist', true) : setFieldValue('primaryMobileExist', false)
+              }}
+              onChange={handleChange}
+              label="Mobile Number"
+              className={classes.textField}
+              fullWidth={true}
+              disabled={values.id || values.sfid}
+              helperText={
+                errors.primarymobileno && touched.primarymobileno
+                  ? errors.primarymobileno
+                  : primaryMobileExistingFlag && primaryMobileExistingFlag.data ? primaryMobileExistingFlag.message
+                  : null
+              }
+              error={(errors.primarymobileno && touched.primarymobileno) || (primaryMobileExistingFlag && primaryMobileExistingFlag.data)}
+            />
+          </Grid>
+        ) : (
+          <Grid item xs={12} style={{ marginTop: "5px"}}>
+            <TextField
+            required
+              name="phone"
+              value={values.phone || ""}
+              type="number"
+              onInput={async (e)=>{
+                e.target.value = e.target.value.slice(0,10);
+              }}
+              onChange={handleChange}
+              label="Mobile Number"
+              className={classes.textField}
+              fullWidth={true}
+              disabled={true}
+              helperText={
+                errors.phone && touched.phone
+                  ? errors.phone
+                  : null
+              }
+              error={(errors.phone && touched.phone)}
+            />
+          </Grid>
+        )}
+   
+        <Grid item xs={12} style={{ marginTop: "5px"}}>
+        <Grid xs={12} style={{ marginBottom: "5px"}}>
+          <TextField
+            name="email"
+            value={values.email || ''}
+            onChange={handleChange}
+            label="Email ID"
+            type="email"
+            className={classes.textField}
+            fullWidth={true}
+            disabled={props.status.isDisabled}
+            helperText={
+              errors.email && (touched.email)
+                ? errors.email
+                : null
+            }
+            error={errors.email && (touched.email)}
+          />
+        </Grid>
+   
+        <Grid xs={12} style={{ marginBottom: "5px"}}>
+          <TextField
+            required
+            type="number"
+            name="total_year_of_experience__c"
+            id="outlined-required-helper-text"
+            value={values.total_year_of_experience__c || ""}
+            onChange={handleChange}
+            label="Total Number of Years in Experience"
+            className={classes.textField}
+            fullWidth={true}
+            margin="normal"
+            disabled={props.status.isDisabled}
+            onBlur={handleBlur}
+            helperText={
+              errors.total_year_of_experience__c && touched.total_year_of_experience__c ? errors.total_year_of_experience__c : null
+            }
+            error={errors.total_year_of_experience__c && touched.total_year_of_experience__c}
+          />
+        </Grid>
+   
+        <Grid xs={12} style={{ marginTop: "5px"}}>
+           <TextField
+             select
+             margin="normal"
+             name="variable_contractor_type__c"
+             fullWidth={true}
+             label="Select Reporting Person"
+             className={classes.textField}
+             value={values.variable_contractor_type__c || ''}
+             disabled={props.status.isDisabled}
+             onBlur={handleBlur}
+             onChange={(e) => {
+               setFieldValue("variable_contractor_type__c", e.target.value);
+             }}
+             helperText={
+               errors.variable_contractor_type__c && touched.variable_contractor_type__c
+                 ? errors.variable_contractor_type__c
+                 : null
+             }
+             error={errors.variable_contractor_type__c && touched.variable_contractor_type__c}
+             >
+               <MenuItem value={"Builder"}>Builder</MenuItem>
+           </TextField>
+        </Grid>
+   
+        <Grid xs={12} style={{ marginTop: "5px"}}>
+           <TextField
+             select
+             margin="normal"
+             name="variable_contractor_type__c"
+             fullWidth={true}
+             label="List of Reporting Person"
+             className={classes.textField}
+             value={values.variable_contractor_type__c || ''}
+             disabled={props.status.isDisabled}
+             onBlur={handleBlur}
+             onChange={(e) => {
+               setFieldValue("variable_contractor_type__c", e.target.value);
+             }}
+             helperText={
+               errors.variable_contractor_type__c && touched.variable_contractor_type__c
+                 ? errors.variable_contractor_type__c
+                 : null
+             }
+             error={errors.variable_contractor_type__c && touched.variable_contractor_type__c}
+             >
+               <MenuItem value={"Builder"}>Builder</MenuItem>
+           </TextField>
+        </Grid>
+   
+        <Grid item xs={12} style={{ marginTop: "5px"}}>
+          <TextField
+            required
+            name="permanent_address1__c"
+            value={values.permanent_address1__c || ""}
+            onChange={handleChange}
+            label="Permanent Address (as in ID)"
+            className={classes.textField}
+            fullWidth={true}
+            disabled={props.status.isDisabled}
+            multiline
+            helperText={
+              errors.permanent_address1__c && touched.permanent_address1__c
+                ? errors.permanent_address1__c
+                : null
+            }
+            error={errors.permanent_address1__c && touched.permanent_address1__c}
+          ></TextField>
+        </Grid>
+        </Grid>
+          <Grid item xs={12} style={{ marginTop: 10, marginBottom: 10 }}>
+            {props.status.isDisabled ?
+              <Button
+                disabled={isSubmitting}
+                onClick={() => { setStatus({ isDisabled: false }); }}
+                fullWidth={true}
+                variant="contained"
+                color="primary"
+              >
+                Edit
+              </Button>
+            : null}
+          </Grid>
+   
+        <Grid item xs={12} style={{ marginTop: 10, marginBottom: 10 }}>
+          {!props.status.isDisabled ?
+            <Button
+              disabled={isSubmitting}
+              type="submit"
+              onClick={() => { saveDisable = true; }}
+              fullWidth={true}
+              variant="contained"
+              color="primary"
+            >
+              SAVE
+            </Button>
+          : null}
+        </Grid>
+   
+    </Grid>
+         : values.contractortype === 'Project Manager' ? 
+         <Grid
+         container
+         direction="row"
+         justify="center"
+         alignItems="center"
+         style={{ padding: 10 }}
+       >     
+         <Grid item xs={12}>
+           <TextField
+             required
+             name="firstname"
+             value={values.firstname || ""}
+             onChange={handleChange}
+             label="First Name"
+             className={classes.textField}
+             fullWidth={true}
+             margin="normal"
+             disabled={props.status.isDisabled}
+             onBlur={handleBlur}
+             helperText={
+               errors.firstname && touched.firstname ? errors.firstname : null
+             }
+             error={errors.firstname && touched.firstname}
+           />
+         </Grid>
+    
+         <Grid item xs={12}>
+           <TextField
+             id="outlined-required-helper-text"
+             name="middlename"
+             value={values.middlename || ""}
+             onChange={handleChange}
+             label="Middle Name"
+             className={classes.textField}
+             fullWidth={true}
+             margin="normal"
+             disabled={props.status.isDisabled}
+             helperText={
+               errors.middlename && touched.middlename
+                 ? errors.middlename
+                 : null
+             }
+             error={errors.middlename && touched.middlename}
+           />
+         </Grid>
+    
+         <Grid item xs={12}style={{ marginBottom: "-5px"}}>
+           <TextField
+             required
+             name="lastname"
+             id="outlined-required-helper-text"
+             value={values.lastname || ""}
+             onChange={handleChange}
+             label="Last Name"
+             className={classes.textField}
+             fullWidth={true}
+             margin="normal"
+             disabled={props.status.isDisabled}
+             onBlur={handleBlur}
+             helperText={
+               errors.lastname && touched.lastname ? errors.lastname : null
+             }
+             error={errors.lastname && touched.lastname}
+           />
+         </Grid>
+    
+         {props.location.pathname == "/cc/leads/lead/basic-details" ? (
+           <Grid item xs={12}>
+             <TextField
+             required
+               name="phone"
+               value={values.phone || ""}
+               type="number"
+               onInput={ async (e)=>{ 
+                const slicedMobileNo = e.target.value.slice(0, 10);
+                 e.target.value= e.target.value.slice(0,10);
+                 e.target.value.length == 10 ?
+                 (await actions.CheckExistingNumberCC({
+                   "primary_mobile_number": slicedMobileNo,
+                   "divisioncode_c": JSON.parse(localStorage.getItem('user')).divisionid__c,
+                   "salesgroupcode_c" : JSON.parse(localStorage.getItem('user')).salesgroupid__c,
+                   "producthierarchycode_c":  JSON.parse(localStorage.getItem('user')).producthierarchycode__c,
+                   "account_id": props.location.pathname == "/cc/end-user/basic-details" && (props && props.location && props.location.state && props.location.state.id && props.location.state.id) ? props.location.state.id : null,
+                   "lead_id": props.location.pathname == "/cc/leads/lead/basic-details" &&(props && props.location && props.location.state && props.location.state.id && props.location.state.id) ? props.location.state.id : null
+                 }) , await actions.CheckExistingNumberInBasant({ "mobileNo": slicedMobileNo}) )
+                 : null
+                 await primaryMobileExistingFlag && primaryMobileExistingFlag.data ? setFieldValue('primaryMobileExist', true) : setFieldValue('primaryMobileExist', false)
+               }}
+               onChange={handleChange}
+               label="Mobile Number"
+               className={classes.textField}
+               fullWidth={true}
+               disabled={values.id || values.sfid}
+               helperText={
+                 errors.primarymobileno && touched.primarymobileno
+                   ? errors.primarymobileno
+                   : primaryMobileExistingFlag && primaryMobileExistingFlag.data ? primaryMobileExistingFlag.message
+                   : null
+               }
+               error={(errors.primarymobileno && touched.primarymobileno) || (primaryMobileExistingFlag && primaryMobileExistingFlag.data)}
+             />
+           </Grid>
+         ) : (
+           <Grid item xs={12} style={{ marginTop: "5px"}}>
+             <TextField
+             required
+               name="phone"
+               value={values.phone || ""}
+               type="number"
+               onInput={async (e)=>{
+                 e.target.value = e.target.value.slice(0,10);
+               }}
+               onChange={handleChange}
+               label="Mobile Number"
+               className={classes.textField}
+               fullWidth={true}
+               disabled={true}
+               helperText={
+                 errors.phone && touched.phone
+                   ? errors.phone
+                   : null
+               }
+               error={(errors.phone && touched.phone)}
+             />
+           </Grid>
+         )}
+    
+         <Grid item xs={12} style={{ marginTop: "5px"}}>
+         <Grid xs={12} style={{ marginBottom: "5px"}}>
+           <TextField
+             name="email"
+             value={values.email || ''}
+             onChange={handleChange}
+             label="Email ID"
+             type="email"
+             className={classes.textField}
+             fullWidth={true}
+             disabled={props.status.isDisabled}
+             helperText={
+               errors.email && (touched.email)
+                 ? errors.email
+                 : null
+             }
+             error={errors.email && (touched.email)}
+           />
+         </Grid>
+    
+         <Grid xs={12} style={{ marginBottom: "5px"}}>
+           <TextField
+             required
+             type="number"
+             name="total_year_of_experience__c"
+             id="outlined-required-helper-text"
+             value={values.total_year_of_experience__c || ""}
+             onChange={handleChange}
+             label="Total Number of Years in Experience"
+             className={classes.textField}
+             fullWidth={true}
+             margin="normal"
+             disabled={props.status.isDisabled}
+             onBlur={handleBlur}
+             helperText={
+               errors.total_year_of_experience__c && touched.total_year_of_experience__c ? errors.total_year_of_experience__c : null
+             }
+             error={errors.total_year_of_experience__c && touched.total_year_of_experience__c}
+           />
+         </Grid>
+    
+         <Grid xs={12} style={{ marginTop: "5px"}}>
+            <TextField
+              select
+              margin="normal"
+              name="variable_contractor_type__c"
+              fullWidth={true}
+              label="Select Reporting Person"
+              className={classes.textField}
+              value={values.variable_contractor_type__c || ''}
+              disabled={props.status.isDisabled}
+              onBlur={handleBlur}
+              onChange={(e) => {
+                setFieldValue("variable_contractor_type__c", e.target.value);
+              }}
+              helperText={
+                errors.variable_contractor_type__c && touched.variable_contractor_type__c
+                  ? errors.variable_contractor_type__c
+                  : null
+              }
+              error={errors.variable_contractor_type__c && touched.variable_contractor_type__c}
+              >
+                <MenuItem value={"Builder"}>Builder</MenuItem>
+            </TextField>
+         </Grid>
+    
+         <Grid xs={12} style={{ marginTop: "5px"}}>
+            <TextField
+              select
+              margin="normal"
+              name="variable_contractor_type__c"
+              fullWidth={true}
+              label="List of Reporting Person"
+              className={classes.textField}
+              value={values.variable_contractor_type__c || ''}
+              disabled={props.status.isDisabled}
+              onBlur={handleBlur}
+              onChange={(e) => {
+                setFieldValue("variable_contractor_type__c", e.target.value);
+              }}
+              helperText={
+                errors.variable_contractor_type__c && touched.variable_contractor_type__c
+                  ? errors.variable_contractor_type__c
+                  : null
+              }
+              error={errors.variable_contractor_type__c && touched.variable_contractor_type__c}
+              >
+                <MenuItem value={"Builder"}>Builder</MenuItem>
+            </TextField>
+         </Grid>
+    
+         <Grid item xs={12} style={{ marginTop: "5px"}}>
+           <TextField
+             required
+             name="permanent_address1__c"
+             value={values.permanent_address1__c || ""}
+             onChange={handleChange}
+             label="Permanent Address (as in ID)"
+             className={classes.textField}
+             fullWidth={true}
+             disabled={props.status.isDisabled}
+             multiline
+             helperText={
+               errors.permanent_address1__c && touched.permanent_address1__c
+                 ? errors.permanent_address1__c
+                 : null
+             }
+             error={errors.permanent_address1__c && touched.permanent_address1__c}
+           ></TextField>
+         </Grid>
+         </Grid>
+           <Grid item xs={12} style={{ marginTop: 10, marginBottom: 10 }}>
+             {props.status.isDisabled ?
+               <Button
+                 disabled={isSubmitting}
+                 onClick={() => { setStatus({ isDisabled: false }); }}
+                 fullWidth={true}
+                 variant="contained"
+                 color="primary"
+               >
+                 Edit
+               </Button>
+             : null}
+           </Grid>
+    
+         <Grid item xs={12} style={{ marginTop: 10, marginBottom: 10 }}>
+           {!props.status.isDisabled ?
+             <Button
+               disabled={isSubmitting}
+               type="submit"
+               onClick={() => { saveDisable = true; }}
+               fullWidth={true}
+               variant="contained"
+               color="primary"
+             >
+               SAVE
+             </Button>
+           : null}
+         </Grid>
+    
+     </Grid>
+
+
+Query integration
+
+: values.contractortype === "Site Supervisor" ?
+                await executeSQL({
+                    query: `Insert into Salesforce.lead(
+                  FirstName ,
+                  MiddleName, 
+                  LastName,
+                  Phone,
+                  Email, 
+                  total_year_of_experience__c,
+                  variable_contractor_type__c,
+                  Permanent_Address1__c,
+                  status)
+                      values ( '${values.firstname ? values.firstname :''}',
+                       '${values.middlename ? values.middlename :''}',
+                       '${values.lastname ? values.lastname : ''}',
+                       '${values.primarymobileno ? values.primarymobileno : ''}',
+                       '${values.email ? values.email : ''}',
+                       '${values.total_year_of_experience__c ? values.total_year_of_experience__c :''}',
+                       '${values.variable_contractor_type__c ? values.variable_contractor_type__c : ''},
+                       '${values.permanentaddress1 ? values.permanentaddress1 : ''}'
+                       'KYC Details') Returning Id`,
+                    token: state.user.token
+                })

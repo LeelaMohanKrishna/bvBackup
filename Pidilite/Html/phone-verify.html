@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cyno</title>
+		<link rel="stylesheet" href="./css/custom.css" />
+	</head>
+	<body>
+		<div class="main-wrapper flex m-auto flex-column">
+			<!-- <img src="./images/welcome.gif" class="m-auto welcome-gif"/> -->
+			<div class="banner-gif"></div>
+			<div class="content-wrapper flex flex-column flex-auto phone-verify">
+				<div class="code-scan">
+                    <i class="ci-qr"><span class="path1"></span><span class="path2"></span></i>
+					<h3 class="text-green text-center">Code Scanned Successfully</h3>
+				</div>
+				<div class="text-with-icon flex">
+					<i class="ci-phone"></i>
+					<div>
+						<h3>Verify Phone Number</h3>
+						<h6>Enter mobile number linked to UPI id</h6>
+					</div>
+				</div>
+				<input type="text" placeholder="Eg: 9876543210" class="form-control" />
+				<div class="mt-auto">
+					<button type="submit" class="btn btn-bottom" disabled>Verify Number</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

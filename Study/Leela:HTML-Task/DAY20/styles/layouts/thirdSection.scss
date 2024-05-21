@@ -1,0 +1,47 @@
+@import '../common/mixin.scss';
+@import '../common/variable.scss';
+
+.design-menu-section {
+	div {
+		background-image: url('./assets/images/discoverMenuBackground.webp');
+		background-position: center;
+		background-repeat: no-repeat;
+		@include flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		@include content-start;
+		@include align-center;
+		text-align: center;
+		padding: 60px 10px 116px 10px;
+		@include for-tablet {
+			padding: 60px 50px 116px 50px;
+		}
+		@include for-desktop {
+			padding: 60px 120px 116px 120px;
+		}
+		h2 {
+			font-size: 18px;
+			letter-spacing: 5px;
+			line-height: 33px;
+			text-transform: uppercase;
+			color: $custom-white;
+			font-weight: 700;
+			font-family: $play-fare;
+			@include for-tablet {
+				font-size: 32px;
+			}
+		}
+		p {
+			font-size: 14px;
+			line-height: 33px;
+			color: $custom-white;
+			font-weight: 400;
+			font-family: $play-fare;
+			@include for-tablet {
+				font-size: 22px;
+			}
+		}
+	}
+}

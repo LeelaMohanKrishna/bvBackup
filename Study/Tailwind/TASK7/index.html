@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TASK7</title>
+		<link rel="stylesheet" href="./src/css/output.css" />
+	</head>
+	<body>
+		<div class="container w-3/4 mx-auto">
+			<section>
+				<h2>Order</h2>
+				<div class="flex gap-x-2 text-center mb-4">
+					<div class="flex-1 order-2 custom-div">01</div>
+					<div class="flex-1 order-last custom-div">02</div>
+					<div class="flex-1 order-3 custom-div">03</div>
+					<div class="flex-1 order-1 custom-div">04</div>
+					<div class="flex-1 order-4 custom-div">05</div>
+				</div>
+			</section>
+			<hr />
+			<section>
+				<h2>Grid columns</h2>
+				<div class="grid grid-cols-3 gap-4 text-center mb-4">
+					<div class="custom-div">01</div>
+					<div class="custom-div">02</div>
+					<div class="custom-div">03</div>
+					<div class="custom-div">04</div>
+					<div class="custom-div">05</div>
+					<div class="custom-div">06</div>
+					<div class="grid grid-cols-subgrid col-span-2">
+						<div class="col-start-2 custom-div">sub-grid</div>
+					</div>
+				</div>
+			</section>
+			<hr />
+			<section>
+				<h2>Col-span</h2>
+				<div class="grid grid-cols-4 gap-4 text-center mb-4">
+					<div class="custom-div col-span-4">01</div>
+					<div class="custom-div">02</div>
+					<div class="custom-div">03</div>
+					<div class="custom-div">04</div>
+					<div class="custom-div">05</div>
+					<div class="custom-div col-span-2">06</div>
+					<div class="custom-div">07</div>
+					<div class="custom-div">08</div>
+				</div>
+			</section>
+			<hr />
+			<section>
+				<h2>Col-start/end</h2>
+				<div class="grid grid-cols-4 gap-4 text-center mb-4">
+					<div class="custom-div col-start-2 col-end-4">01</div>
+					<div class="custom-div col-start-1 col-end-2">02</div>
+					<div class="custom-div col-start-4 col-end-5">03</div>
+					<div class="custom-div col-start-1 col-end-5">04</div>
+				</div>
+			</section>
+			<hr />
+			<section>
+				<h2>Grid template rows</h2>
+				<div class="grid grid-rows-3 grid-flow-col gap-4 text-center mb-4">
+					<div class="custom-div">01</div>
+					<div class="custom-div">02</div>
+					<div class="custom-div">03</div>
+					<div class="grid grid-rows-subgrid row-span-3">
+						<div class="custom-div row-start-2">sub-grid</div>
+					</div>
+					<div class="custom-div">05</div>
+					<div class="custom-div">06</div>
+					<div class="custom-div">07</div>
+				</div>
+			</section>
+			<hr />
+			<section>
+				<h2>Row-span</h2>
+				<div class="grid grid-rows-3 grid-flow-col gap-4 text-center mb-4">
+					<div class="custom-div row-span-3">01</div>
+					<div class="custom-div col-span-2">02</div>
+					<div class="custom-div row-span-2 col-span-2">03</div>
+					<div class="custom-div">04</div>
+					<div class="custom-div">05</div>
+					<div class="custom-div">06</div>
+				</div>
+			</section>
+			<hr />
+			<section>
+				<h2>Row-start/end</h2>
+				<div class="grid grid-rows-2 grid-flow-col gap-4 text-center mb-4">
+					<div class="custom-div row-start-2">01</div>
+					<div class="custom-div row-start-1 row-end-3">02</div>
+					<div class="custom-div row-start-1 row-span-2 hover:row-span-1">03</div>
+					<div class="custom-div">04</div>
+				</div>
+			</section>
+			<hr />
+			<section>
+				<h2>Grid auto flow</h2>
+				<div class="grid grid-flow-row-dense grid-cols-3 grid-rows-3 gap-4 text-center mb-4">
+					<div class="custom-div col-span-2">01</div>
+					<div class="custom-div col-span-2">02</div>
+					<div class="custom-div col-span-3">03</div>
+					<div class="custom-div">04</div>
+				</div>
+			</section>
+			<hr />
+			<section>
+				<h2>Grid auto columns</h2>
+				<div class="grid grid-flow-col auto-cols-max hover:auto-cols-min gap-4 text-center mb-4">
+					<div class="custom-div">01 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sint veritatis temporibus dolorem placeat.</div>
+					<div class="custom-div">02 Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias impedit tempore officiis quasi temporibus.</div>
+					<div class="custom-div">03 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero voluptate illo laboriosam repudiandae possimus .</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

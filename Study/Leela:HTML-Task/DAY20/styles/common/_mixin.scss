@@ -1,0 +1,75 @@
+@import './variable.scss';
+
+@mixin mainWidth {
+	max-width: $max-width;
+}
+
+@mixin blue {
+	color: $custom-blue;
+}
+
+@mixin bg-blue {
+	background-color: $custom-blue;
+}
+
+
+@mixin for-phone {
+	@media (max-width: $mobile-width) {
+		@content;
+	}
+}
+@mixin for-tablet {
+	@media (min-width: $tablet-width) {
+		@content;
+	}
+}
+
+@mixin for-desktop {
+	@media (min-width: $desktop-width) {
+		@content;
+	}
+}
+
+
+@mixin flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin content-space-between {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+@mixin content-center {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+@mixin content-end {
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: end;
+}
+
+@mixin content-start {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: start;
+}
+
+
+@mixin align-center {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+@mixin col-gap($size) {
+	-webkit-column-gap: $size;
+	-moz-column-gap: $size;
+	column-gap: $size;
+}

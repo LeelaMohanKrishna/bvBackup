@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cyno</title>
+		<link rel="stylesheet" href="./css/custom.css" />
+	</head>
+	<body>
+		<div class="main-wrapper flex m-auto flex-column">
+			<!-- <img src="./images/welcome.gif" class="m-auto welcome-gif"/> -->
+			<div class="banner-gif"></div>
+			<div class="content-wrapper flex flex-column flex-auto phone-verify">
+				<div class="text-with-icon flex flex-space-between flex-align-start">
+					<div>
+						<h3>UPI Details</h3>
+						<h6>Enter your UPI details for transaction</h6>
+					</div>
+					<button type="button" class="btn-small"><i class="ci-logout"></i>Logout</button>
+				</div>
+				<div class="upi-details">
+					<div class="form-group">
+						<label class="control-label">Enter UPI ID here</label>
+						<div class="verify-input">
+							<input class="form-control" placeholder="Eg: johndoe@okhdfc" type="text" />
+							<button class="verify-btn">VERIFY</button>
+						</div>
+					</div>
+					<span class="or-text">OR</span>
+					<div class="box flex flex-wrap">
+						<div class="box-wrapper">
+							<input type="radio" id="eng" name="lanuages"/>
+							<label for="eng"></label>
+							<div class="flex box-section">
+								<i class="ci-scan"></i>
+								<span class="box-name-medium">Scan QR Code</span>
+							</div>
+						</div>
+						<div class="box-wrapper">
+							<input type="radio" id="hindi" name="lanuages"/>
+							<label for="hindi"></label>
+							<div class="flex box-section">
+								<i class="ci-image"></i>
+								<span class="box-name-medium">Upload from Gallery</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup">
+					<i class="ci-upi-id"></i>
+					<p>The name associated with your UPI ID is <strong>JOHN SNOW</strong>. Please confirm if the details are correct.</p>
+					<div class="flex btn-group">
+						<button class="btn btn-outline">Cancel</button>
+						<button class="btn">Submit</button>
+					</div>
+				</div>
+				<div class="mt-auto flex flex-column">
+					<span class="tag tag-red"><i class="ci-info"></i>Your KYC is rejected. Please try again!</span>
+					<button type="submit" class="btn btn-bottom">Proceed</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

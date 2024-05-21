@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cyno</title>
+		<link rel="stylesheet" href="./css/custom.css" />
+	</head>
+	<body>
+		<div class="main-wrapper flex m-auto flex-column">
+			<!-- <img src="./images/welcome.gif" class="m-auto welcome-gif"/> -->
+			<div class="banner-gif"></div>
+			<div class="content-wrapper flex flex-column flex-auto phone-verify">
+				<div class="text-with-icon flex flex-space-between flex-align-start">
+					<div>
+						<h3>Bank Account Details</h3>
+						<h6>Enter your bank details for transaction</h6>
+					</div>
+					<button type="button" class="btn-small"><i class="ci-logout"></i>Logout</button>
+				</div>
+				<div class="bank-details">
+					<div class="form-group">
+						<label class="control-label">Name</label>
+						<input class="form-control" placeholder="Eg: John Doe" type="text" />
+					</div>
+					<div class="form-group">
+						<label class="control-label">Bank Name</label>
+						<select class="form-control">
+							<option selected disabled>Eg: John Doe</option>
+							<option>HDFC</option>
+							<option>SBI</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Account Number</label>
+						<input class="form-control" placeholder="XXXXXXXXXXXXXXXX" type="text" />
+					</div>
+					<div class="form-group">
+						<label class="control-label">IFSC Code</label>
+						<input class="form-control" placeholder="XXXXXXXXXXXXXXXX" type="text" />
+					</div>
+				</div>
+				<div class="mt-auto">
+					<button type="submit" class="btn btn-bottom" disabled>Proceed</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

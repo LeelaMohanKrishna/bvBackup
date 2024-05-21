@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TASK 10</title>
+		<link rel="stylesheet" href="./src/css/output.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container w-3/4 mx-auto font-oxygen selection:bg-teal-400 selection:text-purple-400">
+			<section>
+				<h2>Background Attachment</h2>
+				<div class="text-white flex justify-between gap-x-1 mb-18">
+					<div class="bg-fixed w-96 h-64 overflow-y-scroll bg-cover" style="background-image: url('./src/images/pexels.jpg')">
+						<div class="bg-white mt-40">
+							<p class="text-black p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, placeat maxime molestiae odit, veritatis quod harum nulla saepe, quos inventore molestias! Sit doloremque vel nulla quae a, quos rerum laudantium. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, numquam, accusantium provident nemo dolor inventore, quis ducimus quo quod at eligendi quisquam debitis commodi quia laboriosam doloremque ipsum dicta tempora! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore at laudantium quisquam doloribus exercitationem. Quis autem eum, dolore nulla delectus explicabo voluptas expedita ullam odio possimus veritatis atque consectetur ab.</p>
+						</div>
+					</div>
+					<div class="bg-local w-96 h-64 overflow-y-scroll bg-cover" style="background-image: url('./src/images/pexels.jpg')">
+						<p class="p-2">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, placeat maxime molestiae odit, veritatis quod harum nulla saepe, quos inventore molestias! Sit doloremque vel nulla quae a, quos rerum laudantium. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, numquam, accusantium provident nemo dolor inventore, quis ducimus quo quod at eligendi quisquam debitis commodi quia laboriosam doloremque ipsum dicta tempora! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore at laudantium quisquam doloribus exercitationem. Quis autem eum, dolore nulla delectus explicabo voluptas expedita ullam odio possimus veritatis atque consectetur ab. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt debitis nisi maxime provident
+							corrupti mollitia et dignissimos aperiam quis distinctio earum voluptates autem quod facere, placeat adipisci porro totam repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dignissimos, sit quia, numquam rerum eius voluptas explicabo illo labore voluptatum delectus a quis officia. Officiis in laboriosam similique praesentium minima!
+						</p>
+					</div>
+					<div class="bg-scroll w-96 h-64 overflow-y-scroll bg-cover" style="background-image: url('./src/images/pexels.jpg')">
+						<p class="p-2">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, placeat maxime molestiae odit, veritatis quod harum nulla saepe, quos inventore molestias! Sit doloremque vel nulla quae a, quos rerum laudantium. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, numquam, accusantium provident nemo dolor inventore, quis ducimus quo quod at eligendi quisquam debitis commodi quia laboriosam doloremque ipsum dicta tempora! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore at laudantium quisquam doloribus exercitationem. Quis autem eum, dolore nulla delectus explicabo voluptas expedita ullam odio possimus veritatis atque consectetur ab. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt debitis nisi maxime provident
+							corrupti mollitia et dignissimos aperiam quis distinctio earum voluptates autem quod facere, placeat adipisci porro totam repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dignissimos, sit quia, numquam rerum eius voluptas explicabo illo labore voluptatum delectus a quis officia. Officiis in laboriosam similique praesentium minima!
+						</p>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Background Clip</h2>
+				<div class="text-white flex justify-between gap-x-1 mb-18">
+					<div class="bg-clip-border p-6 w-96 h-32 bg-gradient-to-r from-purple-500 to-pink-500 border-4 border-violet-300 border-dashed"></div>
+					<div class="bg-clip-padding p-6 w-96 h-32 bg-gradient-to-r from-violet-500 to-green-500 border-4 border-violet-300 border-dashed"></div>
+					<div class="bg-clip-content p-6 w-96 h-32 bg-gradient-to-r from-blue-500 via-yellow-500 to-red-500 border-4 border-violet-300 border-dashed"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Background Origin</h2>
+				<div class="flex justify-between gap-x-1 mb-18">
+					<div class="bg-origin-border p-6 w-96 h-32 border-4 border-violet-300 border-dashed bg-cover bg-no-repeat" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="bg-origin-padding p-6 w-96 h-32 border-4 border-violet-300 border-dashed bg-cover bg-no-repeat" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="bg-origin-content p-6 w-96 h-32 border-4 border-violet-300 border-dashed bg-cover bg-no-repeat" style="background-image: url('./src/images/pexels.jpg')"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Box Shadow</h2>
+				<div class="flex justify-between gap-x-1 mb-18">
+					<div class="bg-sky-100/25 p-6 w-96 h-32 shadow-md shadow-red-500/50 opacity-100"></div>
+					<div class="bg-sky-100/25 p-6 w-96 h-32 shadow-lg shadow-blue-500/50 opacity-50"></div>
+					<div class="bg-sky-100/25 p-6 w-96 h-32 shadow-xl shadow-green-500/50 opacity-25"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Mix Blend mode</h2>
+				<div class="flex justify-between mb-18">
+					<div class="flex justify-center -space-x-14">
+						<div class="mix-blend-multiply bg-blue-400 p-24 rounded-full"></div>
+						<div class="mix-blend-multiply bg-pink-400 p-24 rounded-full"></div>
+					</div>
+					<div class="flex justify-center -space-x-14">
+						<div class="mix-blend-overlay bg-blue-400 p-24 rounded-full"></div>
+						<div class="mix-blend-overlay bg-pink-400 p-24 rounded-full"></div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Blur</h2>
+				<div class="flex justify-between mb-18">
+					<div class="custom-div blur-one hover:blur-none cursor-pointer" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div blur-sm hover:blur-none cursor-pointer" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div blur-md hover:blur-none cursor-pointer" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div blur-lg hover:blur-none cursor-pointer" style="background-image: url('./src/images/pexels.jpg')"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Brightness</h2>
+				<div class="flex justify-between mb-18">
+					<div class="custom-div brightness-50" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div brightness-100" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div brightness-150" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div brightness-200" style="background-image: url('./src/images/pexels.jpg')"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Contrast</h2>
+				<div class="flex justify-between mb-18">
+					<div class="custom-div contrast-50" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div contrast-100" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div contrast-150" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div contrast-200" style="background-image: url('./src/images/pexels.jpg')"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Grayscale</h2>
+				<div class="flex justify-between mb-18">
+					<div class="custom-div grayscale-0" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div grayscale-50" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div grayscale-75" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div grayscale" style="background-image: url('./src/images/pexels.jpg')"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Hue rotate</h2>
+				<div class="flex justify-between mb-18">
+					<div class="custom-div hue-rotate-30" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div -hue-rotate-60" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div hue-rotate-95" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div -hue-rotate-180" style="background-image: url('./src/images/pexels.jpg')"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Invert</h2>
+				<div class="flex justify-between mb-18">
+					<div class="custom-div invert-0" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div invert-6" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div invert-8" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div invert" style="background-image: url('./src/images/pexels.jpg')"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Saturate</h2>
+				<div class="flex justify-between mb-18">
+					<div class="custom-div saturate-50" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div saturate-100" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div saturate-150" style="background-image: url('./src/images/pexels.jpg')"></div>
+					<div class="custom-div saturate-200" style="background-image: url('./src/images/pexels.jpg')"></div>
+				</div>
+			</section>
+			<section>
+				<h2>Backdrop sepia</h2>
+				<div class="flex justify-around mb-18">
+					<div class="custom-div saturate-50" style="background-image: url('./src/images/pexels.jpg')">
+						<div class="backdrop-sepia-0 bg-white/30 w-36 h-36"></div>
+					</div>
+					<div class="custom-div saturate-100" style="background-image: url('./src/images/pexels.jpg')">
+						<div class="backdrop-sepia bg-white/30 w-36 h-36"></div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Table Layout</h2>
+				<table class="w-full mb-18">
+					<caption class="caption-top">
+						Table 3.1: Professional artists and their songs.
+					</caption>
+					<thead>
+						<tr>
+							<th>Song</th>
+							<th>Artist</th>
+							<th>Year</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="hover:bg-slate-200">
+							<td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+							<td>Malcolm Lockyer</td>
+							<td>1961</td>
+						</tr>
+						<tr class="hover:bg-slate-200">
+							<td>Witchy Woman</td>
+							<td>The Eagles</td>
+							<td>1972</td>
+						</tr>
+						<tr class="hover:bg-slate-200">
+							<td>Shining Star</td>
+							<td>Earth, Wind, and Fire</td>
+							<td>1975</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<section>
+				<h2>Transition</h2>
+				<div class="flex justify-between gap-x-12 mb-18">
+					<button class="bg-blue-500 w-full animation-div transition ease-in hover:bg-indigo-500 hover:-translate-y-1 hover:scale-110">Transition</button>
+					<button class="transition ease-in-out w-full animation-div bg-blue-500 hover:translate-y-1 hover:scale-110 duration-700">Duration</button>
+					<button class="transition ease-out w-full animation-div bg-blue-500 hover:translate-x-1 hover:scale-110 hover:bg-indigo-500 delay-700">Delay</button>
+				</div>
+			</section>
+			<section>
+				<h2>Animation</h2>
+				<div class="flex justify-between mb-18">
+					<button class="bg-gray-600 animation-div animate-none">None</button>
+					<button class="bg-red-600 animation-div animate-spin">Spin</button>
+					<button class="bg-blue-600 animation-div animate-bounce">Bounce</button>
+					<button class="bg-yellow-600 animation-div animate-pulse">Pulse</button>
+					<button class="bg-green-600 animation-div animate-ping">Ping</button>
+				</div>
+			</section>
+			<section>
+				<h2>Transforms</h2>
+				<div class="flex justify-between mb-18">
+					<button class="bg-lime-600 animation-div hover:scale-150">Scale</button>
+					<button class="bg-purple-600 animation-div hover:rotate-45">Rotate</button>
+					<button class="bg-orange-600 animation-div hover:translate-x-5">Translate-x</button>
+					<button class="bg-teal-600 animation-div hover:translate-y-5">Translate-y</button>
+					<button class="bg-pink-600 animation-div hover:skew-x-12">Skew-x</button>
+					<button class="bg-green-600 animation-div hover:skew-y-12">Skew-y</button>
+				</div>
+			</section>
+			<section class="mb-18">
+				<h2>Accent color</h2>
+				<label> <input type="checkbox" checked /> Browser default </label>
+				<label> <input type="checkbox" class="accent-pink-500" checked /> Customized </label>
+			</section>
+			<section class="mb-18">
+				<h2>Appearance</h2>
+				<select>
+					<option>Yes</option>
+					<option>No</option>
+					<option>Maybe</option>
+				</select>
+				<select class="appearance-auto row-start-1 col-start-1 bg-slate-50 dark:bg-slate-600 p-1">
+					<option>Yes</option>
+					<option>No</option>
+					<option>Maybe</option>
+				</select>
+			</section>
+			<section class="mb-18">
+				<h2>Cursor</h2>
+				<div class="flex justify-between">
+					<button type="button" class="cursor-pointer bg-blue-500 p-3 rounded-md text-white">Submit</button>
+					<button type="button" class="cursor-progress bg-pink-500 p-3 rounded-md text-white">Saving...</button>
+					<button type="button" disabled class="cursor-not-allowed bg-green-500 p-3 rounded-md text-white">Confirm</button>
+				</div>
+			</section>
+			<section class="mb-18">
+				<h2>Pointer Events</h2>
+				<div class="relative">
+					<div class="absolute pointer-events-auto">
+						<svg class="absolute text-slate-400 h-5 w-5 mt-6 ml-1" viewBox="0 0 20 20" fill="currentColor">
+							<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+						</svg>
+					</div>
+					<input type="text" placeholder="Search" class="p-6" />
+				</div>
+
+				<div class="relative">
+					<div class="absolute pointer-events-none">
+						<svg class="absolute text-slate-400 h-5 w-5 mt-6 ml-1" viewBox="0 0 20 20" fill="currentColor">
+							<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+						</svg>
+					</div>
+					<input type="text" placeholder="Search" class="p-6" />
+				</div>
+			</section>
+			<section>
+				<h2>Caret Color & Resize</h2>
+				<textarea class="resize text-sm p-2 w-80 ring-1 ring-slate-900/10 shadow-sm rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 caret-pink-500 bg-slate-200 highlight-white/5 focus:bg-slate-300" rows="2"></textarea>
+			</section>
+			<section class="mb-18">
+				<h2>User Select</h2>
+				<div class="select-none bg-blue-300 p-3 mb-2">The quick brown fox jumps over the lazy dog. (none)</div>
+				<div class="select-text bg-blue-300 p-3">The quick brown fox jumps over the lazy dog. (text)</div>
+			</section>
+			<section class="flex justify-between">
+				<div class="mb-18">
+					<h2>SVG Fill</h2>
+					<svg class="fill-blue-500 text-slate-400 h-12" viewBox="0 0 20 20" fill="currentColor">
+						<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+					</svg>
+					<svg class="fill-blue-500 h-12" viewBox="0 0 46 48" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M23.0002 0C12.5068 0 4.00017 8.50659 4.00017 19V32.5335C4.00017 32.8383 3.9145 33.1371 3.75292 33.3956L0.912672 37.94C0.0801118 39.2721 1.0378 41 2.60867 41H43.3917C44.9625 41 45.9202 39.2721 45.0877 37.94L42.2474 33.3956C42.0858 33.1371 42.0002 32.8383 42.0002 32.5335V19C42.0002 8.50659 33.4936 0 23.0002 0ZM23.0002 48C20.2388 48 18.0002 45.7614 18.0002 43H28.0002C28.0002 45.7614 25.7616 48 23.0002 48Z"></path></svg>
+				</div>
+				<div class="mb-18">
+					<h2>SVG Storke</h2>
+					<svg class="stroke-1 stroke-blue-500 text-slate-400 h-12" viewBox="0 0 20 20" fill="currentColor">
+						<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+					</svg>
+					<svg class="stroke-blue-500 stroke-1 h-12" viewBox="0 0 46 48" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M23.0002 0C12.5068 0 4.00017 8.50659 4.00017 19V32.5335C4.00017 32.8383 3.9145 33.1371 3.75292 33.3956L0.912672 37.94C0.0801118 39.2721 1.0378 41 2.60867 41H43.3917C44.9625 41 45.9202 39.2721 45.0877 37.94L42.2474 33.3956C42.0858 33.1371 42.0002 32.8383 42.0002 32.5335V19C42.0002 8.50659 33.4936 0 23.0002 0ZM23.0002 48C20.2388 48 18.0002 45.7614 18.0002 43H28.0002C28.0002 45.7614 25.7616 48 23.0002 48Z"></path></svg>
+				</div>
+				<div class="mb-18">
+					<h2>SVG Storke width</h2>
+					<svg class="stroke-2 stroke-blue-500 text-slate-400 h-12" viewBox="0 0 20 20" fill="currentColor">
+						<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+					</svg>
+					<svg class="stroke-blue-500 stroke-2 h-12" viewBox="0 0 46 48" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M23.0002 0C12.5068 0 4.00017 8.50659 4.00017 19V32.5335C4.00017 32.8383 3.9145 33.1371 3.75292 33.3956L0.912672 37.94C0.0801118 39.2721 1.0378 41 2.60867 41H43.3917C44.9625 41 45.9202 39.2721 45.0877 37.94L42.2474 33.3956C42.0858 33.1371 42.0002 32.8383 42.0002 32.5335V19C42.0002 8.50659 33.4936 0 23.0002 0ZM23.0002 48C20.2388 48 18.0002 45.7614 18.0002 43H28.0002C28.0002 45.7614 25.7616 48 23.0002 48Z"></path></svg>
+				</div>
+			</section>
+			<section>
+				<h2>Snap Center</h2>
+				<div class="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto pb-14">
+					<div class="snap-always snap-center shrink-0">
+						<div class="shrink-0 w-4 sm:w-48"></div>
+					</div>
+					<div class="snap-always snap-center shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-always snap-center shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-always snap-center shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-always snap-center shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-always snap-center shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-always snap-center shrink-0">
+						<div class="shrink-0 w-4 sm:w-48"></div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Snap Start</h2>
+				<div class="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto pb-14">
+					<div class="snap-start shrink-0">
+						<div class="shrink-0 w-4 sm:w-48"></div>
+					</div>
+					<div class="snap-start shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-start shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-start shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-start shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-start shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-start shrink-0">
+						<div class="shrink-0 w-4 sm:w-48"></div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Snap End</h2>
+				<div class="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto pb-14">
+					<div class="snap-normal snap-end shrink-0">
+						<div class="shrink-0 w-4 sm:w-48"></div>
+					</div>
+					<div class="snap-normal snap-end shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-normal snap-end shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-normal snap-end shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-normal snap-end shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-normal snap-end shrink-0">
+						<img class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white" src="./src/images/pexels.jpg" alt="pexels" height="100" width="240" title="pexels" />
+					</div>
+					<div class="snap-normal snap-end shrink-0">
+						<div class="shrink-0 w-4 sm:w-48"></div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

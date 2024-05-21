@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cyno</title>
+		<link rel="stylesheet" href="./css/custom.css" />
+	</head>
+	<body>
+		<div class="main-wrapper flex m-auto flex-column">
+			<!-- <img src="./images/welcome.gif" class="m-auto welcome-gif"/> -->
+			<div class="banner-gif"></div>
+			<div class="content-wrapper flex flex-column flex-auto">
+				<div class="text-with-icon flex flex-space-between flex-align-center">
+					<div>
+						<h3>Dashboard</h3>
+					</div>
+					<button type="button" class="btn-small"><i class="ci-logout"></i>Logout</button>
+				</div>
+				<div class="transaction-wrapper layout-box">
+					<div class="box flex flex-wrap box-3">
+						<div class="box-wrapper">
+							<div class="flex flex-column box-section">
+								<span class="box-name-small">Current Balance Amount</span>
+								<span class="box-title">₹95</span>
+							</div>
+						</div>
+						<div class="box-wrapper">
+							<div class="flex flex-column box-section">
+								<span class="box-name-small">Total Amount Earned</span>
+								<span class="box-title">₹745</span>
+							</div>
+						</div>
+						<div class="box-wrapper">
+							<div class="flex flex-column box-section">
+								<span class="box-name-small">Transaction History</span>
+								<a href="#"><i class="ci-arrow"></i></a>
+								<span class="box-title box-title-small">View List</span>
+							</div>
+						</div>
+					</div>
+					<div class="transaction-text m-0">Money will automatically be credited to your source after ₹250</div>
+				</div>
+				<div class="layout-box">
+					<div class="box flex flex-wrap box-3">
+						<div class="box-wrapper">
+							<div class="flex flex-column text-center">
+								<span class="ci-qr-code-scan icon flex flex-just-center">
+									<span class="path1"></span>
+									<span class="path2"></span>
+									<span class="path3"></span>
+									<span class="path4"></span>
+									<span class="path5"></span>
+									<span class="path6"></span>
+									<span class="path7"></span>
+									<span class="path8"></span>
+									<span class="path9"></span>
+									<span class="path10"></span>
+									<span class="path11"></span>
+									<span class="path12"></span>
+									<span class="path13"></span>
+									<span class="path14"></span>
+								</span>
+								<h6>QR Code Scan</h6>
+							</div>
+						</div>
+						<div class="box-wrapper">
+							<div class="flex flex-column text-center">
+								<i class="ci-upi-varification icon flex flex-just-center">
+									<span class="path1"></span>
+									<span class="path2"></span>
+									<span class="path3"></span>
+									<span class="path4"></span>
+									<span class="path5"></span>
+									<span class="path6"></span>
+									<span class="path7"></span>
+									<span class="path8"></span>
+								</i>
+								<h6>UPI ID Verification</h6>
+							</div>
+						</div>
+						<div class="box-wrapper">
+							<div class="flex flex-column text-center">
+								<span class="ci-add-new-ac icon flex flex-just-center">
+									<span class="path1"></span>
+									<span class="path2"></span>
+									<span class="path3"></span>
+									<span class="path4"></span>
+									<span class="path5"></span>
+									<span class="path6"></span>
+								</span>
+								<h6>Add New Bank A/C</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="layout-box single-box">
+					<div class="flex flex-align-center">
+						<img src="./images/pan.svg" />
+						<h6>PAN Card Verification</h6>
+						<a href="" class="ml-auto"><i class="ci-arrow"></i></a>
+					</div>
+				</div>
+				<div class="layout-box single-box">
+					<div class="flex flex-align-center">
+						<img src="./images/adhar.svg" />
+						<h6>KYC Updation</h6>
+						<a href="" class="ml-auto"><i class="ci-arrow"></i></a>
+					</div>
+				</div>
+				<div class="mt-auto flex flex-column">
+					<button type="submit" class="btn btn-bottom">Go to Home</button>
+				</div>
+			</div>
+			<!-- temporary below element is hidden need to show conditionally -->
+			<div class="transaction-history-wrapper" style="display: none;">
+				<div class="transaction-history flex flex-column">
+					<div class="flex flex-align-center transaction-header">
+						<i class="ci-currency"></i>
+						<h3>Transaction History</h3>
+					</div>
+					<div class="transaction-body flex flex-column flex-auto">
+						<ul class="tabs flex flex-space-around">
+							<li class="active"><a href="">All</a></li>
+							<li><a href="">RECENT</a></li>
+							<li><a href="">WEEKLY</a></li>
+							<li><a href="">MONTHLY</a></li>
+						</ul>
+						<ul class="transaction-list flex-auto">
+							<li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li>
+							<li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li></li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li></li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li></li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li></li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li></li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li><li class="flex flex-space-between">
+								<span class="amount">
+									<h2>₹11.0</h2>
+									<small>Earned</small>
+								</span>
+								<span class="date-time">
+									28/11/2023<br>12:18 AM
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

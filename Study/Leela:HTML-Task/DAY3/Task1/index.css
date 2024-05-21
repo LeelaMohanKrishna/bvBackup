@@ -1,0 +1,53 @@
+.container {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.middleContainer {
+    background-color: rgba(0, 4, 255, 0.2);
+    box-shadow: 0px 0px 15px currentColor;
+    width: 400px;
+    border-radius: 25px;
+    padding: 20px;
+    height: 200px;
+    text-align: center;
+    font-family: "Audiowide", sans-serif;
+}
+
+.firstContainer {
+    background-image: linear-gradient(to bottom right, rgb(95, 201, 160), rgb(52, 62, 199));
+    box-shadow: 10px 10px rgb(29, 29, 41);
+    width: 400px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 20px;
+    height: 200px;
+    text-align: center;
+}
+
+.firstContainer p {
+    white-space: nowrap;
+    width: 350px;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.thirdContainer {
+    background-color: rgb(152, 167, 185);
+    box-shadow: 10px 10px 10px rgb(94, 94, 97) inset;
+    width: 400px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 20px;
+    height: 200px;
+    text-align: center;
+}
+
+.thirdContainer p {
+    white-space: nowrap;
+    width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

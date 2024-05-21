@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    background-image: url('https://www.imageshine.in/uploads/gallery/Free-vector-watercolor-background-Wallpaper.jpg');
+    background-size: cover;
+    margin-bottom: 60px;
+    color: azure;
+    width: 100vw;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(170, 203, 231);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.bannerImage {
+    height: 250px;
+    width: 100vw;
+}
+
+.image-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.image-container img {
+    border-radius: 50px;
+    width: 400px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(170, 203, 231);
+    color: black;
+    height: 30px;
+    padding: 10px;
+    width: 100vw;
+    text-align: center;
+}
+
+.icon {
+    height: 50px;
+    cursor: pointer;
+}
+
+.navLinks {
+    display: flex;
+    margin: 12px;
+    list-style: none;
+}
+
+.navLinks li {
+    margin-left: 12px;
+}
+
+.title {
+    text-align: center;
+}
+
+.descriptionData {
+    font-family: cursive;
+    font-style: italic;
+}
+
+.paragraph {
+    text-align: center;
+    width: 500px;
+    border: solid;
+    min-height: 500px;
+    padding: 10px;
+    margin: auto;
+}
+
+.banner-content {
+    position: absolute;
+    top: 250px;
+    font-size: 33px;
+    color: rgb(112, 112, 138);
+}

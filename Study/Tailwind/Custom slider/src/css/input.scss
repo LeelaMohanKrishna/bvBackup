@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.slider-container {
+		@apply relative overflow-hidden;
+	}
+	.slider {
+		@apply flex transition-transform duration-500 ease-in-out;
+	}
+
+	.slide {
+		@apply flex-none flex-shrink-0 flex-grow-0 w-full;
+	}
+
+	.prev-btn,
+	.next-btn {
+		@apply absolute top-[50%] transform -translate-y-1/2 bg-transparent text-black p-3 cursor-pointer;
+	}
+
+	.prev-btn {
+		@apply left-0;
+	}
+
+	.next-btn {
+		@apply right-0;
+	}
+
+	.dots {
+		@apply flex justify-center space-x-2;
+		.dot {
+			@apply block rounded-full h-5 w-5 bg-slate-600;
+		}
+		.active {
+			@apply bg-blue-500;
+		}
+	}
+
+	.slider-container-1 {
+		@apply relative overflow-hidden;
+	}
+
+	.slides-1 {
+		@apply flex transition-transform duration-500 ease-in-out my-20;
+	}
+
+	.slide-1 {
+		@apply flex-none flex-shrink-0 flex-grow-0 w-full max-w-[484px] px-10 py-0 mx-0 flex justify-center items-center;
+	}
+
+	.prev-btn-1,
+	.next-btn-1 {
+		@apply absolute top-[40%] border-none p-3 cursor-pointer z-10;
+	}
+
+	.prev-btn-1 {
+		@apply left-[440px];
+	}
+
+	.next-btn-1 {
+		@apply right-[440px];
+	}
+
+	.img-scale {
+		@apply transform scale-125;
+	}
+}

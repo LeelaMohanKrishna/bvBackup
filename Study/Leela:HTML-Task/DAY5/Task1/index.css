@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    background-color: rgb(29, 28, 28);
+}
+
+h1 {
+    font-size: 18px;
+}
+
+button {
+    background-color: #ff8000;
+    height: 40px;
+    border: 0;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e9a96a;
+    color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    background-color: white;
+    width: 1024px;
+    margin: auto;
+}
+
+.main-banner {
+    background-image: url('../assets/desktop-wallpaper-chocolate-black-cake-party-cream-dessert-food-cup-chocolate-sweet-cupcakes-dessert-bakery-cupcakes-cream-section-еда-cakes-and-cupcakes.jpg');
+    background-size: cover;
+    height: auto;
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dessert-container {
+    background-color: white;
+    width: 365px;
+    height: 400px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image1 {
+    height: 380px;
+    width: 300px;
+    background-size: cover;
+}
+
+.middle-banner {
+    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgb(143, 230, 233));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.recipe-container {
+    background-color: #ff8c19;
+    width: 350px;
+    padding: 50px;
+    height: 320px;
+    color: white;
+}
+
+.middle-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image2 {
+    height: 350px;
+    width: 380px;
+    margin-right: -40px;
+    z-index: 1;
+}
+
+.footer-banner {
+    padding: 20px;
+    background-color: rgb(248, 248, 238);
+}
+
+.image3 {
+    height: 350px;
+    width: 380px;
+    margin-left: -40px;
+    z-index: 1;
+}
+
+.cursive {
+    font-style: italic;
+}

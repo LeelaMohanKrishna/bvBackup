@@ -1,0 +1,256 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('fonts/icomoon.eot?uz8vji');
+	src: url('fonts/icomoon.eot?uz8vji#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?uz8vji') format('truetype'), url('fonts/icomoon.woff?uz8vji') format('woff'), url('fonts/icomoon.svg?uz8vji#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart:before {
+	content: '\e93a';
+}
+
+.icon-search:before {
+	content: '\e986';
+}
+
+.icon-zoom-in:before {
+	content: '\e987';
+}
+
+.icon-fire:before {
+	content: '\e9a9';
+}
+
+.icon-menu:before {
+	content: '\e9bd';
+}
+
+.icon-sphere:before {
+	content: '\e9c9';
+}
+
+.icon-link:before {
+	content: '\e9cb';
+}
+
+.icon-eye:before {
+	content: '\e9ce';
+}
+
+.icon-arrow-right2:before {
+	content: '\ea3c';
+}
+
+.icon-arrow-left2:before {
+	content: '\ea40';
+}
+
+.icon-mail2:before {
+	content: '\ea84';
+}
+
+@mixin spacing {
+	padding: 20px 160px;
+}
+
+@mixin for-phone-only {
+	@media (max-width: 600px) {
+		@content;
+	}
+}
+@mixin for-tablet {
+	@media (min-width: 600px) {
+		@content;
+	}
+}
+
+@mixin for-desktop {
+	@media (min-width: 900px) {
+		@content;
+	}
+}
+
+* {
+	margin: 0;
+}
+
+header {
+	background-color: #155bd5;
+	width: 1533px;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include spacing;
+	ul {
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+		width: 500px;
+		padding: 0;
+		li {
+			font-size: 22px;
+		}
+		li:hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+	}
+	span {
+		cursor: pointer;
+	}
+}
+
+.section1 {
+	@include spacing;
+	display: grid;
+	grid-template-columns: auto;
+	column-gap: 166px;
+	@include for-tablet() {
+		grid-template-columns: auto auto;
+	}
+	@include for-desktop {
+		grid-template-columns: auto auto auto;
+	}
+	div {
+		position: relative;
+		margin-bottom: 20px;
+		img {
+			width: 800px;
+			height: 800px;
+			border-radius: 15px;
+			margin-bottom: 10px;
+			@include for-tablet {
+				width: 600px;
+				height: 600px;
+			}
+			@include for-desktop {
+				width: 400px;
+				height: 400px;
+			}
+		}
+		h1 {
+			font-size: 34px;
+			margin-bottom: 10px;
+			@include for-tablet {
+				font-size: 28px;
+			}
+			@include for-desktop {
+				font-size: 22px;
+			}
+		}
+		p {
+			font-size: 34px;
+			@include for-tablet {
+				font-size: 28px;
+			}
+			@include for-desktop {
+				font-size: 22px;
+			}
+		}
+		.overlay {
+			position: absolute;
+			background: rgba(233, 233, 233, 0.705);
+			top: 0;
+			opacity: 0;
+			width: 800px;
+			height: 800px;
+			border-radius: 15px;
+			transition: 0.5s ease;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include for-tablet {
+				width: 600px;
+				height: 600px;
+			}
+			@include for-desktop {
+				width: 400px;
+				height: 400px;
+			}
+			span {
+				margin-left: 15px;
+				font-size: x-large;
+				background-color: #155bd5;
+				padding: 15px;
+				border-radius: 12px;
+				color: white;
+			}
+		}
+		.overlay:hover {
+			cursor: pointer;
+			opacity: 1;
+		}
+	}
+}
+
+.section2 {
+	@include spacing;
+	width: 1533px;
+	ul {
+		list-style: none;
+		padding: 0;
+		li {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 5px;
+			@include for-desktop {
+				flex-direction: row;
+			}
+
+			div {
+				padding: 180px 20px;
+				width: 765px;
+				@include for-tablet {
+					width: 1533px;
+					text-align: center;
+				}
+				@include for-desktop {
+					width: 727px;
+					text-align: center;
+				}
+				h1 {
+					font-size: 100px;
+					font-weight: 100;
+				}
+				p {
+					font-size: 28px;
+					font-weight: 100;
+					color: gray;
+					line-height: 1.5;
+				}
+			}
+			img {
+				@include for-tablet {
+					width: 1533px;
+				}
+				@include for-desktop {
+					width: 765px;
+				}
+			}
+		}
+		li:nth-child(even) {
+			flex-direction: column-reverse;
+			@include for-desktop {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+}

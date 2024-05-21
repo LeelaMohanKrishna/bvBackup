@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TASK9</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="./src/css/output.css" />
+	</head>
+	<body>
+		<div class="container w-3/4 mx-auto font-oxygen">
+			<section>
+				<h2>List style</h2>
+				<div>
+					<ul class="list-image-[url('./src/images/image.png')] list-div">
+						<li>option1</li>
+						<li>option2</li>
+						<li>option3</li>
+					</ul>
+					<ul class="list-disc list-inside list-div">
+						<li>option1</li>
+						<li>option2</li>
+						<li>option3</li>
+					</ul>
+					<ul class="list-decimal list-outside list-div">
+						<li>option1</li>
+						<li>option2</li>
+						<li>option3</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h2>Text align & Decoration</h2>
+				<div>
+					<p class="text-start text-blue-700 underline decoration-green-700 underline-offset-4 decoration-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, dolorum voluptates explicabo nesciunt laudantium nihil, cupiditate illum fugit sint saepe ducimus tenetur a sapiente eum! Placeat enim sint dolorum magni?</p>
+					<p class="text-center mt-5 mb-5 text-blue-700/50 overline decoration-double">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, dolorum voluptates explicabo nesciunt laudantium nihil, cupiditate illum fugit sint saepe ducimus tenetur a sapiente eum! Placeat enim sint dolorum magni?</p>
+					<p class="text-end text-blue-700/25 line-through decoration-red-700/50 decoration-dashed">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, dolorum voluptates explicabo nesciunt laudantium nihil, cupiditate illum fugit sint saepe ducimus tenetur a sapiente eum! Placeat enim sint dolorum magni?</p>
+				</div>
+			</section>
+			<section>
+				<h2>Text Transform</h2>
+				<div class="mb-5">
+					<p class="normal-case">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<p class="uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<p class="lowercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<p class="capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+				</div>
+			</section>
+			<section>
+				<h2>Text Overflow</h2>
+				<div class="flex justify-between mb-5">
+					<div class="max-width">
+						<p class="truncate">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur culpa deserunt cum suscipit harum? Dignissimos dolore quas quia dolorum molestiae odit labore aut fugiat, tenetur, velit quaerat, perferendis temporibus id.</p>
+					</div>
+					<div class="max-width">
+						<p class="text-ellipsis overflow-hidden">Lorem ipsumdolorsitametconsecteturadipisicingelitTenetursdfsdggdrhdhdthdg culpa deserunt cum suscipit harum? Dignissimos dolore quas quia dolorum molestiae odit labore aut fugiat, tenetur, velit quaerat, perferendis temporibus id.</p>
+					</div>
+					<div class="max-width">
+						<p class="text-clip overflow-hidden">Lorem ipsumdolorsitametconsecteturadipisicingelitTenetuadfafaefsrgsrgdfaegagr culpa deserunt cum suscipit harum? Dignissimos dolore quas quia dolorum molestiae odit labore aut fugiat, tenetur, velit quaerat, perferendis temporibus id.</p>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Text Wrap & indent</h2>
+				<div class="mb-5">
+					<div class="text-nowrap">
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur culpa deserunt cum suscipit harum? Dignissimos dolore quas quia dolorum molestiae odit labore aut fugiat, tenetur, velit quaerat, perferendis temporibus id.</p>
+					</div>
+					<div class="text-wrap indent-2">
+						<p>Lorem ipsumdolorsitametconsecteturadipisicingelitTenetuadfafaefsrgsrgdfaegagr culpa deserunt cum suscipit harum? Dignissimos dolore quas quia dolorum molestiae odit labore aut fugiat, tenetur, velit quaerat, perferendis temporibus id.</p>
+					</div>
+					<div class="text-balance indent-4">
+						<p>Lorem ipsumdolorsitametconsecteturadipisicingelitTenetuadfafaefsrgsrgdfaegagr culpa deserunt cum suscipit harum? Dignissimos dolore quas quia dolorum molestiae odit labore aut fugiat, tenetur, velit quaerat, perferendis temporibus id.</p>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Word break</h2>
+				<div class="flex justify-between">
+					<div class="max-width">
+						<p class="break-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur culpa deserunt cum suscipit harum? Dignissimos dolore quas quia dolorum molestiae odit labore aut fugiat, tenetur, velit quaerat, perferendis temporibus id.</p>
+					</div>
+					<div class="max-width">
+						<p class="break-words">Lorem ipsumdolorsitametconsecteturadipisicingelitTenetursdfsdggdrhdhdthdg culpa deserunt cum suscipit harum? Dignissimos dolore quas quia dolorum molestiae odit labore aut fugiat, tenetur, velit quaerat, perferendis temporibus id.</p>
+					</div>
+					<div class="max-width">
+						<p class="break-all">Lorem ipsumdolorsitametconsecteturadipisicingelitTenetuadfafaefsrgsrgdfaegagr culpa deserunt cum suscipit harum? Dignissimos dolore quas quia dolorum molestiae odit labore aut fugiat, tenetur, velit quaerat, perferendis temporibus id.</p>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Hyphens</h2>
+				<div class="flex justify-between">
+					<div class="max-width">
+						<p class="hyphens-none">Lorem ipsumdolorsitametconsectetu&shy;radipisicinge litTenetursd fsdggdrhdhdthdg culpa deserunt cum suscipit harum? Dignissimos dolore quas quia dolorum molestiae odit labore aut fugiat, tenetur, velit quaerat, perferendis temporibus id.</p>
+					</div>
+					<div class="max-width">
+						<p class="hyphens-manual">Lorem ipsumdolorsitametconsectetu&shy;radipisicingelitTenetursdfsdggdrhdhdthdg culpa deserunt cum suscipit harum? Dignissimos dolore quas quia dolorum molestiae odit labore aut fugiat, tenetur, velit quaerat, perferendis temporibus id.</p>
+					</div>
+					<div class="max-width">
+						<p class="hyphens-auto">Lorem ipsumdolorsitametconsecteturadipisicingelitTenetursdfsdggdrhdhdthdg culpa deserunt cum suscipit harum? Dignissimos dolore quas quia dolorum molestiae odit labore aut fugiat, tenetur, velit quaerat, perferendis temporibus id.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,111 @@
+@import '../common/mixin.scss';
+@import '../common/variable.scss';
+
+footer {
+	margin: 80px 0 0 0;
+	@include for-desktop {
+		margin: 100px 40px 0 40px;
+	}
+	color: $custom-white;
+	.footer-container-main {
+		@include mainWidth;
+		background-image: url('./assets/images/footer.webp');
+		background-size: cover;
+		margin: 0 auto;
+		.footer-container {
+			padding: 50px 10px 10px 10px;
+			@include for-tablet {
+				padding: 100px 20px;
+			}
+			@include for-desktop {
+				padding: 200px 40px 100px 40px;
+			}
+			@include flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			@include content-center;
+			@include align-center;
+			row-gap: 20px;
+			@include for-tablet {
+				@include flex;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: row;
+				flex-direction: row;
+				@include content-space-between;
+				@include align-center;
+				row-gap: 0;
+			}
+			.footer-details {
+				div {
+					.location-logo {
+						height: 20px;
+						width: 17px;
+						@include for-tablet {
+							height: 33px;
+							width: 30px;
+						}
+					}
+					.email-logo {
+						height: 15px;
+						width: 21px;
+						@include for-tablet {
+							height: 23px;
+							width: 29px;
+						}
+					}
+					margin-bottom: 20px;
+					display: flex;
+					justify-content: center;
+					@include for-tablet {
+						justify-content: start;
+					}
+					align-items: center;
+					column-gap: 20px;
+					a {
+						text-decoration: none;
+						color: $custom-white;
+					}
+				}
+			}
+			.skewers-logo {
+				max-height: 45px;
+				max-width: 158px;
+				@include for-tablet {
+					max-height: 74px;
+					max-width: 259px;
+				}
+			}
+		}
+		.social-media {
+			@include flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: reverse;
+			-ms-flex-direction: column-reverse;
+			flex-direction: column-reverse;
+			@include content-center;
+			@include align-center;
+			row-gap: 20px;
+			@include for-tablet {
+				@include flex;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: row;
+				flex-direction: row;
+				@include content-space-between;
+				@include align-center;
+				row-gap: 0;
+			}
+			padding: 20px 40px;
+			div {
+				@include flex;
+				@include col-gap(10px);
+				a {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

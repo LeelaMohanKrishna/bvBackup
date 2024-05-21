@@ -1,0 +1,199 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?uz8vji");
+  src: url("fonts/icomoon.eot?uz8vji#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?uz8vji") format("truetype"), url("fonts/icomoon.woff?uz8vji") format("woff"), url("fonts/icomoon.svg?uz8vji#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-cart:before {
+  content: '\e93a'; }
+
+.icon-search:before {
+  content: '\e986'; }
+
+.icon-zoom-in:before {
+  content: '\e987'; }
+
+.icon-fire:before {
+  content: '\e9a9'; }
+
+.icon-menu:before {
+  content: '\e9bd'; }
+
+.icon-sphere:before {
+  content: '\e9c9'; }
+
+.icon-link:before {
+  content: '\e9cb'; }
+
+.icon-eye:before {
+  content: '\e9ce'; }
+
+.icon-arrow-right2:before {
+  content: '\ea3c'; }
+
+.icon-arrow-left2:before {
+  content: '\ea40'; }
+
+.icon-mail2:before {
+  content: '\ea84'; }
+
+* {
+  margin: 0; }
+
+header {
+  background-color: #155bd5;
+  width: 1533px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 160px; }
+  header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    padding: 0; }
+    header ul li {
+      font-size: 22px; }
+    header ul li:hover {
+      cursor: pointer;
+      text-decoration: underline; }
+  header span {
+    cursor: pointer; }
+
+.section1 {
+  padding: 20px 160px;
+  display: grid;
+  grid-template-columns: auto;
+  column-gap: 166px; }
+  @media (min-width: 600px) {
+    .section1 {
+      grid-template-columns: auto auto; } }
+  @media (min-width: 900px) {
+    .section1 {
+      grid-template-columns: auto auto auto; } }
+  .section1 div {
+    position: relative;
+    margin-bottom: 20px; }
+    .section1 div img {
+      width: 800px;
+      height: 800px;
+      border-radius: 15px;
+      margin-bottom: 10px; }
+      @media (min-width: 600px) {
+        .section1 div img {
+          width: 600px;
+          height: 600px; } }
+      @media (min-width: 900px) {
+        .section1 div img {
+          width: 400px;
+          height: 400px; } }
+    .section1 div h1 {
+      font-size: 34px;
+      margin-bottom: 10px; }
+      @media (min-width: 600px) {
+        .section1 div h1 {
+          font-size: 28px; } }
+      @media (min-width: 900px) {
+        .section1 div h1 {
+          font-size: 22px; } }
+    .section1 div p {
+      font-size: 34px; }
+      @media (min-width: 600px) {
+        .section1 div p {
+          font-size: 28px; } }
+      @media (min-width: 900px) {
+        .section1 div p {
+          font-size: 22px; } }
+    .section1 div .overlay {
+      position: absolute;
+      background: rgba(233, 233, 233, 0.705);
+      top: 0;
+      opacity: 0;
+      width: 800px;
+      height: 800px;
+      border-radius: 15px;
+      transition: 0.5s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      @media (min-width: 600px) {
+        .section1 div .overlay {
+          width: 600px;
+          height: 600px; } }
+      @media (min-width: 900px) {
+        .section1 div .overlay {
+          width: 400px;
+          height: 400px; } }
+      .section1 div .overlay span {
+        margin-left: 15px;
+        font-size: x-large;
+        background-color: #155bd5;
+        padding: 15px;
+        border-radius: 12px;
+        color: white; }
+    .section1 div .overlay:hover {
+      cursor: pointer;
+      opacity: 1; }
+
+.section2 {
+  padding: 20px 160px;
+  width: 1533px; }
+  .section2 ul {
+    list-style: none;
+    padding: 0; }
+    .section2 ul li {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5px; }
+      @media (min-width: 900px) {
+        .section2 ul li {
+          flex-direction: row; } }
+      .section2 ul li div {
+        padding: 180px 20px;
+        width: 765px; }
+        @media (min-width: 600px) {
+          .section2 ul li div {
+            width: 1533px;
+            text-align: center; } }
+        @media (min-width: 900px) {
+          .section2 ul li div {
+            width: 727px;
+            text-align: center; } }
+        .section2 ul li div h1 {
+          font-size: 100px;
+          font-weight: 100; }
+        .section2 ul li div p {
+          font-size: 28px;
+          font-weight: 100;
+          color: gray;
+          line-height: 1.5; }
+      @media (min-width: 600px) {
+        .section2 ul li img {
+          width: 1533px; } }
+      @media (min-width: 900px) {
+        .section2 ul li img {
+          width: 765px; } }
+    .section2 ul li:nth-child(even) {
+      flex-direction: column-reverse; }
+      @media (min-width: 900px) {
+        .section2 ul li:nth-child(even) {
+          flex-direction: row-reverse; } }
+
+/*# sourceMappingURL=output.css.map */

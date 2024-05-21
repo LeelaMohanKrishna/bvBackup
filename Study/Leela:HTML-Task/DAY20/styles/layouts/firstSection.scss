@@ -1,0 +1,301 @@
+@import '../common/mixin.scss';
+@import '../common/variable.scss';
+
+.header-section {
+	background-image: url('./assets/images/backGroundImageMainNew.webp');
+	background-size: cover;
+	.container {
+		@include for-tablet {
+			background-image: url('./assets/images/backGroundImageMain.webp');
+		}
+		color: $custom-white;
+		position: relative;
+		@include mainWidth;
+		margin: 0 auto;
+		height: auto;
+		&::after {
+			content: '';
+			background-image: url('./assets/images/carrotCornBowlMobile.webp');
+			background-size: cover;
+			position: absolute;
+			height: 120px;
+			width: 123px;
+			bottom: -10%;
+			left: 3%;
+			-webkit-filter: drop-shadow(47.543px 63.092px 45px rgba(0, 0, 0, 0.76));
+			filter: drop-shadow(47.543px 63.092px 45px rgba(0, 0, 0, 0.76));
+			@include for-tablet {
+				background-image: url('./assets/images/carrotCornBowl.webp');
+				height: 160px;
+				width: 163px;
+				bottom: -13%;
+				left: 6%;
+			}
+			@include for-desktop {
+				height: 220px;
+				width: 223px;
+				left: 9%;
+			}
+		}
+		.header {
+			// position: fixed;
+			// top: 0;
+			// z-index: 1;
+			width: 100%;
+			@include for-desktop {
+				@include mainWidth;
+			}
+			// background-color: rgba(15, 15, 15, 0.849);
+			.logo {
+				cursor: pointer;
+				display: none;
+				@include for-tablet {
+					display: block;
+					padding-left: 40px;
+				}
+			}
+			@include flex;
+			@include content-space-between;
+			@include align-center;
+			.header-details {
+				padding-top: 10px;
+				@include flex;
+				@include content-center;
+				@include align-center;
+				@include col-gap(20px);
+				@include for-tablet {
+					@include content-end;
+				}
+				span {
+					line-height: normal;
+					color: $custom-white;
+					font-weight: 700;
+					font-family: $montserrat;
+					text-align: right;
+					@include for-tablet {
+						font-size: 14px;
+					}
+					@include for-desktop {
+						font-size: 17px;
+					}
+					a {
+						text-decoration: none;
+						color: $custom-white;
+					}
+				}
+			}
+			ul {
+				list-style: none;
+				padding: 0;
+				@include flex;
+				@include content-space-between;
+				@include for-tablet {
+					@include col-gap(10px);
+				}
+				@include for-desktop {
+					@include col-gap(30px);
+				}
+				li {
+					a {
+						text-decoration: none;
+						font-size: 12px;
+						letter-spacing: 3px;
+						color: $custom-white;
+						font-weight: 700;
+						font-family: $play-fare;
+						@include for-tablet {
+							font-size: 14px;
+						}
+						@include for-desktop {
+							font-size: 17px;
+						}
+					}
+				}
+				:hover {
+					@include blue;
+					cursor: pointer;
+				}
+			}
+			.details {
+				display: none;
+				@include for-tablet {
+					display: block;
+					padding-right: 40px;
+				}
+			}
+			.topnav {
+				@include for-tablet {
+					display: none;
+				}
+				width: 100%;
+				position: relative;
+				#myLinks {
+					display: none;
+				}
+				a {
+					color: $custom-white;
+					padding: 12px 14px;
+					text-decoration: none;
+					font-size: 17px;
+					display: block;
+					background-color: gray;
+				}
+				.menu-icon {
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 10px;
+				}
+				.active {
+					background-color: transparent;
+				}
+			}
+		}
+		.header-details-mobile {
+			padding: 10px 10px 0 10px;
+			@include flex;
+			@include content-space-between;
+			@include align-center;
+			span {
+				font-size: 13px;
+				line-height: normal;
+				color: $custom-white;
+				font-weight: 700;
+				font-family: $montserrat;
+				text-align: right;
+				a {
+					text-decoration: none;
+					color: $custom-white;
+				}
+			}
+			.scooter-mobile {
+				max-width: 60px;
+				max-height: 36px;
+			}
+			@include for-tablet {
+				display: none;
+			}
+		}
+		.container-main {
+			@include flex;
+			flex-direction: column;
+			@include align-center;
+			padding: 0 0 50px 0;
+			@include for-tablet {
+				padding: 10px 50px 20px 50px;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: normal;
+			}
+			.heading-container {
+				position: relative;
+				.heading {
+					text-align: end;
+					width: 153px;
+					@include for-tablet {
+						width: 252px;
+					}
+					@include for-desktop {
+						width: 498px;
+					}
+				}
+				h1 {
+					font-size: 28px;
+					line-height: 28px;
+					margin-bottom: 50px;
+					@include for-tablet {
+						font-size: 45px;
+						line-height: 45px;
+						margin-top: 70px;
+						margin-bottom: 0;
+					}
+					@include for-desktop {
+						font-size: 89px;
+						line-height: 89px;
+						margin-top: 120px;
+						margin-bottom: 0;
+					}
+					text-transform: uppercase;
+					color: $custom-white;
+					font-weight: 700;
+					font-family: $play-fare;
+					span {
+						font-size: 24px;
+						@include for-tablet {
+							font-size: 46px;
+						}
+						@include for-desktop {
+							font-size: 91px;
+						}
+						text-transform: uppercase;
+						@include blue;
+						font-weight: 700;
+						font-family: $play-fare;
+					}
+				}
+				.text-background {
+					background-image: url('./assets/images/textBgDeasign.webp');
+					background-repeat: no-repeat;
+					background-size: contain;
+					position: absolute;
+					bottom: 12px;
+					left: 10px;
+					padding: 10px 20px 10px 20px;
+					font-size: 18px;
+					color: $custom-white;
+					font-family: $surfer;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					max-width: 100px;
+					@include for-tablet {
+						max-width: 180px;
+						padding: 20px 45px 20px 45px;
+						position: absolute;
+						bottom: 44%;
+						left: 1%;
+						font-size: 26px;
+					}
+					@include for-desktop {
+						max-width: 280px;
+						padding: 30px 80px 30px 80px;
+						bottom: 37%;
+						left: 6%;
+						font-size: 42px;
+					}
+				}
+			}
+			.main-course {
+				.receipe {
+					max-width: 342px;
+					max-height: 350px;
+					@include for-tablet {
+						max-width: 385px;
+						max-height: 400px;
+					}
+					@include for-desktop {
+						max-width: 619px;
+						max-height: 634px;
+					}
+				}
+				position: relative;
+				.ketchup {
+					height: 101px;
+					width: 103px;
+					@include for-tablet {
+						height: 111px;
+						width: 113px;
+					}
+					@include for-desktop {
+						height: 170px;
+						width: 173px;
+					}
+					position: absolute;
+					left: -4%;
+					top: 14%;
+				}
+				filter: drop-shadow(47.543px 63.092px 45px rgba(0, 0, 0, 0.76));
+			}
+		}
+	}
+}

@@ -1,0 +1,59 @@
+@import '../common/mixin.scss';
+@import '../common/variable.scss';
+
+.food-slider-section {
+	.sliderContainer {
+		@include mainWidth;
+		margin: 0 auto;
+		@include for-tablet {
+			padding: 30px 0;
+		}
+		div {
+			img {
+				height: 300px;
+				margin: 10px auto;
+			}
+			h2 {
+				text-align: center;
+			}
+		}
+		.slick-center {
+			transform: scale(1.1);
+			padding: 20px 0;
+		}
+		.slick-next:before {
+			color: black;
+			content: url(./assets/images/arrowRight.webp);
+			font-size: 100px;
+			opacity: 0.8;
+		}
+		.slick-prev:before {
+			color: black;
+			content: url(./assets/images/arrowLeft.webp);
+			font-size: 100px;
+			opacity: 0.8;
+		}
+		.slick-prev {
+			z-index: 999;
+			@include for-tablet {
+				left: 150px;
+				top: 140px;
+			}
+			@include for-desktop {
+				left: 480px;
+				top: 160px;
+			}
+		}
+		.slick-next {
+			z-index: 999;
+			@include for-tablet {
+				right: 160px;
+				top: 140px;
+			}
+			@include for-desktop {
+				right: 480px;
+				top: 160px;
+			}
+		}
+	}
+}
